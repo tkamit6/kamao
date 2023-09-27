@@ -1,11 +1,11 @@
 import './App.css';
-import Navbar from './pages/Navbar';
 import { Footer } from './pages/Footer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { BusinessPage } from './pages/BusinessPage';
 import LandingPage from './pages/LandingPage';
 import About from './pages/About'
 import TeamLeader from './pages/TeamLeader';
+import PageNotFound from './pages/PageNotFound';
 
 function App() {
   return (
@@ -18,8 +18,9 @@ function App() {
           <Route path="/business" element={<BusinessPage />} />
           <Route path="/about-us" element={<About />} />
           <Route path="/team-leader" element={<TeamLeader />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
 
     </>
