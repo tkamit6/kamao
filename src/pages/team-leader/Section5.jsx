@@ -37,9 +37,7 @@ export default function Section5() {
     return (
         <section className='team-ongoingProject container mx-auto md:mb-8 md:my-8 py-0 max-w-7xl wrap '>
             <h1 className='text-center relative font-bold md:text-[2.62rem] text-[1.75rem] font-head md:mb-16 mb-12 text-[#3D3E3E]'>Our Ongoing <span className='text-[#E78353]'>Projects</span></h1>
-
-
-            <div>
+            <div className='md:block hidden'>
                 <Slider {...settings}>
                 {
                     onGoingProjectdata.map((data, id)=>(

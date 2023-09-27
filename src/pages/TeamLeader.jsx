@@ -5,6 +5,7 @@ import Section2 from '../pages/BusinessPage/Section2'
 import Section3 from './team-leader/Section3';
 import Section4 from './team-leader/Section4';
 import Section5 from './team-leader/Section5';
+import { Footer } from '../pages/Footer'
 
 export default function TeamLeader() {
   return (
@@ -15,6 +16,7 @@ export default function TeamLeader() {
       <Section3 />
       <Section4 />
       <Section5 />
+      <Footer />
     </>
   )
 }

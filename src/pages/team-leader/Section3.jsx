@@ -32,19 +32,15 @@ const Section3 = () => {
             const currentScrollPos = window.scrollY;
             // console.log(currentScrollPos);
             if (currentScrollPos > preState) {
-                if (currentScrollPos >= 1390 && scrollY <= 3100) {
+                if (currentScrollPos >= 2200 && scrollY <= 3100) {
                     setToggleState(3)
-                    console.log("active 3")
-                } else if (currentScrollPos >= 1290 && scrollY <= 3100) {
+                } else if (currentScrollPos >= 1900 && scrollY <= 3100) {
                     setToggleState(2)
-                    console.log("active 2")
                 }
-                else if (currentScrollPos >= 1090 && scrollY <= 3100) {
+                else if (currentScrollPos >= 1750 && scrollY <= 3100) {
                     setToggleState(1)
-                    console.log("active 1")
-                } else if (currentScrollPos >= 870 && scrollY <= 3100) {
+                } else if (currentScrollPos >= 1500 && scrollY <= 3100) {
                     setToggleState(0)
-                    console.log("active 0")
                 }
             }
         }
@@ -63,7 +59,7 @@ const Section3 = () => {
 
         <section className='container mx-auto md:py-16 md:ps-10 wrap max-w-7xl bg-white'>
             <div className='stick-parallax'>
-                <h1 className='text-center relative z-50 font-bold md:text-[2.62rem] text-[1.75rem] font-head md:mb-16 mb-12 text-[#3D3E3E]'>How to Become a <span className='text-[#E78353]'>Team Leader </span></h1>
+                <h1 className='text-center relative font-bold md:text-[2.62rem] text-[1.75rem] font-head md:mb-16 mb-12 text-[#3D3E3E]'>How to Become a <span className='text-[#E78353]'>Team Leader </span></h1>
                 <div className="grid md:grid-cols-4 pt-10 md:mx-5 md:-mt-44 items-center">
                     <div className="md:col-span-2 rounded-2xl hidden md:block">
                         <ul className="tabList">
@@ -95,7 +91,7 @@ const Section3 = () => {
                             ))
                         }
 
-                        <ul className='divc p-4 md:px-[102px] rounded-2xl mt-8 md:gap-6 gap-1 grid grid-cols-4 justify-between bg-gradient-to-r from-[#FFA24C] to-[#9F5EFF]'>
+                        {/* <ul className='divc p-4 md:px-[102px] rounded-2xl mt-8 md:gap-6 gap-1 grid grid-cols-4 justify-between bg-gradient-to-r from-[#FFA24C] to-[#9F5EFF]'>
                             <li className='items-center md:col-span-1 col-span-2 flex flex-row gap-4 '>
                                 <img src={downloadIcon} alt="img" draggable='false' loading='lazy' />
                                 <div className='text-white '>
@@ -124,7 +120,7 @@ const Section3 = () => {
                                     <p className=' md:text-lg text-xs'>User Earnings</p>
                                 </div>
                             </li>
-                        </ul>
+                        </ul> */}
                     </div>
                 </div>
             </div>

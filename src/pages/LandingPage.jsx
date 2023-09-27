@@ -12,6 +12,7 @@ import Section10 from './LandingPage/Section10'
 import Section11 from './LandingPage/Section11'
 import Section12 from './LandingPage/Section12'
 import NavbarLanding from './LandingPage/NavbarLanding';
+import { Footer } from '../pages/Footer'
 
 const LandingPage = () => {
   return (
@@ -29,6 +30,7 @@ const LandingPage = () => {
       <Section10 />
       <Section11 />
       <Section12 />
+      <Footer />
     </>
   )
 }

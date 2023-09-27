@@ -383,6 +383,12 @@ textarea {
   color: #E78353;
   font-size: 12px;
 }
+.teamLeaderSection1{
+  background: url('./images/team-leader/banner.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
 
 @media only screen and (max-width: 600px) {
   .wrap {

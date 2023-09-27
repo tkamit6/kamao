@@ -19,6 +19,7 @@ import Section9 from './BusinessPage/Section9'
 import Section10 from './BusinessPage/Section10'
 import ContextProvider from './BusinessPage/ContextProvider'
 import Navbar from './Navbar'
+import { Footer } from '../pages/Footer'
 
 export const BusinessPage = () => {
 
@@ -47,6 +48,7 @@ export const BusinessPage = () => {
         <Section8 />
         <Section9 />
         <Section10 />
+        <Footer />
       </ContextProvider>
     </>
   )
