@@ -1,6 +1,6 @@
 import React from 'react'
 import urbanClap from '../../images/landingPage/urbanClap.png';
-import zomato from '../../images/landingPage/zomato.png';
+import zomato from '../../images/landingPage/Zomato.png';
 import IDFC from '../../images/landingPage/IDFC.svg';
 import rapido from '../../images/landingPage/rapido.png'
 import paytm from '../../images/landingPage/paytm.png'
