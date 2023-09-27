@@ -9,6 +9,7 @@ import { BsArrowRight } from 'react-icons/bs'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/free-mode';
