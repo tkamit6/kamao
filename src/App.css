@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+@font-face {
+    font-family: "FONTSPRING";
+    src:url("./font/Lugfa_Fonts/Fontspring-DEMO-lufga-medium.otf");
+}
+
+*{
+    font-family: 'DM Sans', sans-serif;
+}
+.font-head{
+    font-family: "FONTSPRING", sans-serif;
+}
+
+
+ 
+  
