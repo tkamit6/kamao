@@ -97,7 +97,7 @@ const Section5 = () => {
                 </div>
 
                 <div className='mx-auto flex items-center justify-center relative mt-10'>
-                    <Link to='' className='text-[#FA6F2C] relative items-center p-5 w-[16%] rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Apply to jobs now <BsArrowRight className='absolute  top-3 right-5' /> </Link>
+                    <Link to='' className='text-[#FA6F2C] relative items-center p-5 md:w-[16%] w-[52%] rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Apply to jobs now <BsArrowRight className='absolute  top-3 right-5' /> </Link>
                 </div>
             </div>
         </section>

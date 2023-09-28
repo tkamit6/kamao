@@ -42,6 +42,11 @@ const Navbar = () => {
     }
     const handleMobileMenu = () => {
         setOpen(false)
+        window.scrollTo({
+            top:0,
+            behavior:'smooth'
+        })
+
     }
 
     const pathMatchRoute = (route) => {

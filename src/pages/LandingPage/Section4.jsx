@@ -42,7 +42,7 @@ const Section4 = () => {
                 ))}
             </div>
             <div className='mx-auto text-center items-center flex justify-center '>
-                <Link to='' className='text-[#FA6F2C] w-[12%] p-5 flex relative rounded-full items-center border border-[#FA6F2C] py-2  font-bold text-base' >Apply Now <BsArrowRight className='absolute items-center top-3 right-6' /> </Link>
+                <Link to='' className='text-[#FA6F2C] md:w-[12%] w-[43%] p-5 flex relative rounded-full items-center border border-[#FA6F2C] py-2  font-bold text-base' >Apply Now <BsArrowRight className='absolute items-center top-3 right-6' /> </Link>
             </div>
         </section>
     )
