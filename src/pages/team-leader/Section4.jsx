@@ -34,7 +34,7 @@ export default function Section4() {
             <div className="absolute bg-[#F3C1A9] w-10 h-10 right-[28%] top-12 rounded-full"></div>
             <div className="absolute bg-[#F0B428] w-4 h-4 right-[15%] rounded-full"></div>
             <div className="absolute bg-[#E00086] w-4 h-4 right-[5%] top-[60%] rounded-full"></div>
-            <div className="absolute bg-[#00A846] w-4 h-4 right-[13%] bottom-[5%] rounded-full"></div>
+            <div className="absolute bg-[#00A846] w-4 h-4 right-[13%] bottom-[5%] rounded-full md:block hidden"></div>
                 <Swiper
                     pagination={{
                         dynamicBullets: true,
@@ -56,7 +56,7 @@ export default function Section4() {
                                         <img src={data.img} alt="img" className='md:w-[356px]' />
                                     </div>
                                     <div className='col-span-4'>
-                                        <h2 className='font-bold md:text-[2.5rem] md:leading-[3.23rem] md:w-[70%] text-[#3D3E3E] md:mb-6 '>{data.heading}</h2>
+                                        <h2 className='font-bold md:text-[2.5rem] md:leading-[3.23rem] md:w-[70%] text-[#3D3E3E] md:text-start text-center text-[28px] md:mb-6 mb-1 mt-3'>{data.heading}</h2>
                                         <p className='text-[#7C7C7C] font-medium text-xl md:w-[84%]'>{data.about}</p>
                                     </div>
                                 </div>

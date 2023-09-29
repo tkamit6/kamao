@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Section1() {
     return (
-        <section className='teamLeaderSection1 container mx-auto md:h-[50rem] h-[20rem] md:mb-8 md:mt-0 py-0 max-w-7xl wrap '>
+        <section className='teamLeaderSection1 container mx-auto md:h-[50rem] h-[28rem] md:mb-8 md:mt-0 py-0 max-w-7xl wrap '>
             <div className='text-center md:pt-16 '>
                 <h2 className='font-bold md:text-[3rem] text-[2rem] md:leading-[3.875rem] leading-[2.53rem] text-[#0D0E0E] font-head'>Be an <span className='text-[#E16428] font-head'> Entrepreneur </span> you always <br /> wanted to be.</h2>
                 <p className='text-[#7C7C7C] font-medium text-base leading-[22px]'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ul</p>

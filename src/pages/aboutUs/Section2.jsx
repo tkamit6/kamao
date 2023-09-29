@@ -32,7 +32,7 @@ export default function Section2() {
             <div className='md:hidden block'>
                 <h2 className='font-head font-bold text-[1.75rem] text-center text-[#3D3E3E]'>Our <span className='font-head text-[#E78353]'>Story</span></h2>
                 <div className='grid gap-y-6'>
-                    <p className='text-lg font-medium leading-[1.43rem] text-[#7C7C7C]'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue mor Lorem ipsum dolor sit amet consectetur ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar </p>
+                    <p className='md:text-lg text-base font-medium leading-[1.43rem] text-[#7C7C7C]'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue mor Lorem ipsum dolor sit amet consectetur ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar </p>
                     <div className='flex justify-between gap-4'>
                         <div className=" text-center w-[100%] pb-5 py-3 items-center flex flex-col justify-center rounded-xl bg-[#E8F9FF]">
                             <h3 className='text-[#007CC2] text-2xl font-bold leading-[52px]'> 50 + </h3>
@@ -48,7 +48,7 @@ export default function Section2() {
                             <p className='text-[#6F2ECF] font-bold text-xs'>GIGS</p>
                         </div>
                     </div>
-                    <p className='text-lg font-medium leading-[1.43rem] text-[#7C7C7C] mb-6'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue mor Lorem ipsum dolor sit amet consectetur ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar </p>
+                    <p className='md:text-lg text-base font-medium leading-[1.43rem] text-[#7C7C7C] mb-6'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue mor Lorem ipsum dolor sit amet consectetur ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar </p>
                 </div>
             </div>
         </section>

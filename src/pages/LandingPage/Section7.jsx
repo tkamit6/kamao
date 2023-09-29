@@ -21,7 +21,7 @@ const Section7 = () => {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
-            console.log(currentScrollPos + " sec7");
+            // console.log(currentScrollPos + " sec7");
             if (currentScrollPos > preState) {
                 if (currentScrollPos >= 5600 && scrollY <= 5700) {
                     setToggleState(2)

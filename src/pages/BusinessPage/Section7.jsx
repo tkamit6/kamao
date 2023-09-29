@@ -6,7 +6,6 @@ import bag from '../../images/form/bag.svg'
 import office from '../../images/form/office.svg'
 import category from '../../images/form/category.svg'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
-import S from './S'
 
 
 const Section7 = () => {
@@ -19,7 +18,6 @@ const Section7 = () => {
         company: '',
         category: '',
         message: '',
-        // Add more fields as needed
     });
 
     const handleChange = (e) => {
@@ -33,7 +31,7 @@ const Section7 = () => {
     const handleSubmitStep1 = (e) => {
         e.preventDefault();
 
-        // if (formData.name == "" || formData.phone == "" || formData.email == "" || formData.job == "" || formData.company == "") {
+        // if (!formData.name || !formData.phone || !formData.email || !formData.job || !formData.company ) {
         //     alert("Fill the details")
         //     return false
         // }

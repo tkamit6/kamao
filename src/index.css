@@ -290,6 +290,12 @@ textarea {
   border-radius: 8px;
 }
 
+@layer pages{
+  .form-ctrl{
+    @apply w-full border-solid border-[#6E6E6E] rounded-md py-2 ps-10;
+  }
+}
+
 @keyframes border_anim {
   0% {
     height: 0%;
@@ -387,7 +393,13 @@ textarea {
   background: url('./images/team-leader/banner.webp');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+}
+.about-founder{
+  background: url('./images/about-us/about-Founder-bg.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
@@ -435,7 +447,7 @@ textarea {
   }
 
   .busy-logo-img {
-    width: 125px;
+    width: 130px;
   }
 
   .businessBottomRight::after {
@@ -558,7 +570,7 @@ textarea {
   }
 
   nav .logo-img {
-    width: 125px;
+    width: 130px;
   }
 
 }
