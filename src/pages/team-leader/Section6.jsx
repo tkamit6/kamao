@@ -64,29 +64,35 @@ export default function Section6() {
                                     </div>
                                     <div>
                                         <p className='font-medium md:text-2xl text-lg text-[#3D3E3E] md:mb-6 mb-2'>Who Are You?</p>
-                                        <label className="flex items-center md:mb-3 space-x-2">
-                                            <input type="checkbox" className="checked:bg-indigo-100" />
+                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                            <input type="checkbox" className="" />
+                                            <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Experienced field agent</span>
                                         </label>
-                                        <label className="flex items-center md:mb-3 space-x-2">
-                                            <input type="checkbox" className="checked:bg-indigo-100" />
+                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                            <input type="checkbox" className="" />
+                                            <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Entrepreneur</span>
                                         </label>
-                                        <label className="flex items-center md:mb-3 space-x-2">
-                                            <input type="checkbox" className="checked:bg-indigo-100" />
+                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                            <input type="checkbox" className="" />
+                                            <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Community leader (SHG, Mitra, Sahaj, etc.)</span>
                                         </label>
-                                        <label className="flex items-center md:mb-3 space-x-2">
-                                            <input type="checkbox" className="checked:bg-indigo-100" />
-                                            <span className="text-[#7C7C7C] font-medium md:text-lg text-base">SMB business owner</span>
+                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                            <input type="checkbox" className="" />
+                                            <div class="checkmark"></div>
+                                            <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">SMB business owner</span>
                                         </label>
-                                        <label className="flex items-center md:mb-3 space-x-2">
-                                            <input type="checkbox" className="checked:bg-indigo-100" />
+                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                            <input type="checkbox" className="" />
+                                            <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Agency owner/ manage</span>
                                         </label>
-                                        <label className="flex items-center md:mb-3 space-x-2">
-                                            <input type="checkbox" className="checked:bg-indigo-100" />
-                                            <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Other</span>
+                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                            <input type="checkbox" className="" />
+                                            <div class="checkmark"></div>
+                                            <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">Other</span>
                                         </label>
                                         <button type='submit' className='bg-[#FA6F2C] gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-6 me-2 relative text-white font-bold cursor-pointer'>Next <BsArrowRight color='#fff absolute' /> </button>
                                     </div>
