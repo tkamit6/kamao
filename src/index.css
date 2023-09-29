@@ -338,6 +338,12 @@ textarea {
 .checkbox-container input:checked ~ .checkmark:after {
   display: block;
 }
+.team-enroll{
+  background: url('./images/team-leader/EnrollNowBackground.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 @layer pages{

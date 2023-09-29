@@ -6,7 +6,7 @@ import tick2 from '../../images/tick2.svg'
 import tick3 from '../../images/tick3.svg'
 import AppStoreImg from '../../images/AppStore.png'
 import playStoreImg from '../../images/playStore.png'
-import mobile from '../../images/mobile.png'
+import mobile from '../../images/mobile.webp'
 
 const Section9 = () => {
     return (

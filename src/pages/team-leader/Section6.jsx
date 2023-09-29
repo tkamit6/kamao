@@ -11,16 +11,20 @@ export default function Section6() {
     const [formStep, setformStep] = useState(1)
 
     const [formData, setformData] = useState({
-        fullname:'',
-        phone:'',
-        email:'',
-        city:'',
-        briefIndustry:'',
-
+        fullname: '',
+        phone: '',
+        email: '',
+        city: '',
+        briefIndustry: '',
+        managingTeamExpierence: '',
+        devoteProgram:'',
+        teamSize:'',
     })
 
-    const onChange = (e)=>{
-        setformData({...formData, [e.target.id]: e.target.value})
+    const { managingTeamExpierence, teamSize, devoteProgram } = formData;
+
+    const onChange = (e) => {
+        setformData({ ...formData, [e.target.id]: e.target.value })
     }
 
     const SubmitformStep1 = (e) => {
@@ -33,7 +37,7 @@ export default function Section6() {
     }
 
     return (
-        <section className='team-ongoingProject container mx-auto md:mb-8 md:my-8 md:py-10 bg-[#FFF5EF] py-4 max-w-7xl wrap '>
+        <section className='team-enroll container mx-auto md:mb-8 md:my-8 md:py-10 bg-[#FFF5EF] py-4 max-w-7xl wrap '>
             <div className='md:py-16 md:mx-[102px]'>
                 <div className='md:grid md:grid-cols-12 md:space-x-16 md:mx-0 mx-4'>
                     <div className="col-span-5 md:text-start text-center md:mb-auto mb-6 mx-auto md:w-full w-[93%]">
@@ -60,7 +64,7 @@ export default function Section6() {
                                     </div>
                                     <div className='relative items-center flex'>
                                         <img src={loactionIcon} alt="user" className='absolute' />
-                                        <input type="text"  onChange={onChange} id='city' placeholder='City' className='w-full border-solid border-[#6E6E6E] rounded-md py-2 ps-10 focus:outline-[#E78353]' />
+                                        <input type="text" onChange={onChange} id='city' placeholder='City' className='w-full border-solid border-[#6E6E6E] rounded-md py-2 ps-10 focus:outline-[#E78353]' />
                                     </div>
                                     <div>
                                         <p className='font-medium md:text-2xl text-lg text-[#3D3E3E] md:mb-6 mb-2'>Who Are You?</p>
@@ -102,7 +106,7 @@ export default function Section6() {
                                 <form onSubmit={finalformSubmit} className='gap-5'>
                                     <div className='mb-6'>
                                         <p className='md:font-medium font-bold md:text-2xl text-lg md:mb-6 mb-3 text-[#3D3E3E] md:leading-[28px] leading-[22px]'>Do you have experience of managing team for field sales or field marketing activities?</p>
-                                        <select id="salesFieldExpirence" className="w-full border cursor-pointer border-solid border-[#6E6E6E]  rounded-md py-3 px-2 focus:outline-[#E78353] hover:border-[#E78353]">
+                                        <select id="managingTeamExpierence" value={managingTeamExpierence} onChange={onChange} className="w-full border cursor-pointer border-solid border-[#6E6E6E]  rounded-md py-3 px-2 focus:outline-[#E78353] hover:border-[#E78353]">
                                             <option >Select yes or no</option>
                                             <option value="yes">Yes</option>
                                             <option value="no">No</option>
@@ -110,13 +114,13 @@ export default function Section6() {
                                     </div>
                                     <div className='mb-6'>
                                         <p className='md:font-medium font-bold md:text-2xl text-lg md:mb-6 mb-3 text-[#3D3E3E] md:leading-[28px] leading-[22px]'>How much time would you be able to devote to this program per day?</p>
-                                        <select id="salesFieldExpirence" className="w-full cursor-pointer border border-solid border-[#6E6E6E] rounded-md mb-8 py-3 px-2 focus:outline-[#E78353] hover:border-[#E78353]">
+                                        <select id="devoteProgram" value={devoteProgram} onChange={onChange} className="w-full cursor-pointer border border-solid border-[#6E6E6E] rounded-md mb-8 py-3 px-2 focus:outline-[#E78353] hover:border-[#E78353]">
                                             <option className='py-3 h-40'>Select your time limit</option>
                                             <option className='py-3 p-6' value="6-hours">Upto 6 Hours</option>
                                             <option value="10-hours">Upto 10 Hours</option>
                                         </select>
 
-                                        <select id="salesFieldExpirence" className="w-full cursor-pointer border border-solid border-[#6E6E6E] rounded-md py-3 px-2 focus:outline-[#E78353] hover:border-[#E78353]">
+                                        <select id="teamSize" value={teamSize} onChange={onChange} className="w-full cursor-pointer border border-solid border-[#6E6E6E] rounded-md py-3 px-2 focus:outline-[#E78353] hover:border-[#E78353]">
                                             <option className='py-3 h-40'>Select previous team size</option>
                                             <option className='py-3 p-6' value="10-20">10-20 </option>
                                             <option value="20-40">20-40</option>
