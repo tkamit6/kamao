@@ -13,11 +13,11 @@ function App() {
       <BrowserRouter>
         {/* <Navbar/> */}
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/landing" element={<LandingPage />} />
-          <Route path="/business" element={<BusinessPage />} />
-          <Route path="/about-us" element={<About />} />
-          <Route path="/team-leader" element={<TeamLeader />} />
+          <Route exact path="/" element={<LandingPage />} />
+          <Route exact path="/landing" element={<LandingPage />} />
+          <Route exact path="/business" element={<BusinessPage />} />
+          <Route exact path="/about-us" element={<About />} />
+          <Route exact path="/team-leader" element={<TeamLeader />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         {/* <Footer /> */}
