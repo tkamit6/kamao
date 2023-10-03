@@ -69,13 +69,15 @@ const Section5 = () => {
                     <Swiper
                         slidesPerView={1.2}
                         spaceBetween={30}
+                        freeMode={true}
+
                         // grid={{
                         //     rows: 1,
                         // }}
                         pagination={{
                             clickable: true,
                         }}
-                        modules={[ FreeMode, Autoplay]}
+                        modules={[FreeMode, Autoplay]}
                         className="activityHiring md:hidden block me-6"
                     >
 
