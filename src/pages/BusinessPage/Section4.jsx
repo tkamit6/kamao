@@ -91,7 +91,7 @@ const Section4 = () => {
                                 <div key={id}>
                                     <img src={list?.Mobileimg} alt="img" loading='lazy' className='mx-auto' />
                                     <p className='text-center font-bold text-lg text-[#7C7C7C] pt-4'>{`Step ${id + 1}`}</p>
-                                    <p className="text-center text-[#E78353] font-bold text-[28px] pb-5">{list.name}</p>
+                                    <p className="text-center text-[#E78353] font-bold text-[28px] w-[89%] mx-auto pb-5">{list.name}</p>
                                 </div>
                             ))
                         }

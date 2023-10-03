@@ -6,6 +6,7 @@ import Section3 from './aboutUs/Section3';
 import Section4 from './aboutUs/Section4';
 import Section5 from './aboutUs/Section5';
 import { Footer } from '../pages/Footer'
+import Section6 from './aboutUs/Section6';
 
 export default function About() {
   return (
@@ -14,6 +15,7 @@ export default function About() {
       <Section1 />
       <Section2 />
       <Section3 />
+      <Section6 />
       <Section4 />
       <Section5 />
       <Footer />

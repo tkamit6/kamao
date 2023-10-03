@@ -28,7 +28,7 @@ export default function Section4() {
     return (
         <section className='container mx-auto md:mb-8 md:mt-2 md:my-8 py-0 max-w-7xl wrap '>
             <h1 className='text-center relative font-bold md:text-[2.62rem] text-[1.75rem] font-head md:mb-16 mb-12 text-[#3D3E3E]'>Why become a <span className='text-[#E78353]'>Team Leader </span>with Kamaao?</h1>
-            <div className='mx-9 team-swiper-div relative'>
+            <div className='md:mx-9 md-0 team-swiper-div relative'>
             <div className="absolute bg-[#6F2ECF] w-8 h-8 left-[9%] rounded-full"></div>
             <div className="absolute bg-[#007CC2] w-7 h-7 left-[11%] bottom-[5%] rounded-full"></div>
             <div className="absolute bg-[#F3C1A9] w-10 h-10 right-[28%] top-12 rounded-full"></div>
@@ -57,7 +57,7 @@ export default function Section4() {
                                     </div>
                                     <div className='col-span-4'>
                                         <h2 className='font-bold md:text-[2.5rem] md:leading-[3.23rem] md:w-[70%] text-[#3D3E3E] md:text-start text-center text-[28px] md:mb-6 mb-1 mt-3'>{data.heading}</h2>
-                                        <p className='text-[#7C7C7C] font-medium text-xl md:w-[84%]'>{data.about}</p>
+                                        <p className='text-[#7C7C7C] font-medium md:text-start  text-center text-xl md:w-[84%]'>{data.about}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>

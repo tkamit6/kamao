@@ -75,7 +75,7 @@ const Section5 = () => {
                         pagination={{
                             clickable: true,
                         }}
-                        // modules={[ ]}
+                        modules={[ FreeMode, Autoplay]}
                         className="activityHiring md:hidden block me-6"
                     >
 

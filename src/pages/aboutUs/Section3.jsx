@@ -22,14 +22,14 @@ export default function Section3() {
                     <div className='flex items-center space-x-9'>
                         <img src={eye} alt="svg" draggable='false' className='md:h-[64px] h-[48px]' />
                         <div className='md:w-[58%] w-auto'>
-                            <h3 className='text-[#3D3E3E] font-bold md:text-[2rem] text-xl'>Our Mission</h3>
+                            <h3 className='text-[#3D3E3E] font-bold md:text-[2rem] text-xl'>Our Vision</h3>
                             <p className='text-[#7C7C7C] md:text-lg text-base leading-[23px] font-medium'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies </p>
                         </div>
                     </div>
                     <div className='flex items-center space-x-9'>
                         <img src={diomond} alt="svg" draggable='false' className='md:h-[64px] h-[48px]' />
                         <div className='md:w-[58%] w-auto'>
-                            <h3 className='text-[#3D3E3E] font-bold md:text-[2rem] text-xl'>Our Mission</h3>
+                            <h3 className='text-[#3D3E3E] font-bold md:text-[2rem] text-xl'>Our Value</h3>
                             <p className='text-[#7C7C7C] md:text-lg text-base leading-[23px] font-medium'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies </p>
                         </div>
                     </div>

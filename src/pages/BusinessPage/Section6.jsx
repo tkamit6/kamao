@@ -57,8 +57,12 @@ const Section6 = () => {
                 ))
               }
             </div>
-            <div className="md:col-span-4">
-              <img src={data[toggleState]?.img} alt="img" loading='lazy' draggable="false" className='backdropImg' />
+            <div className="md:col-span-4 relative">
+              <img src={data[toggleState]?.img} alt="img" loading='lazy' draggable="false" className='backdropImg relative' />
+              <span className='absolute h-[20%] w-[100%] backdrop-blur-lg bottom-4 rounded-2xl right-0 py-3 px-6'>
+                <h3 className='font-medium text-2xl text-white'>Company Name</h3>
+                <p className='font-bold text-2xl text-white'>AMAZON</p>
+              </span>
             </div>
           </div>
           <div className='p-4 md:mt-0 mt-0 md:px-8 bg-white rounded-2xl md:order-none order-1'>

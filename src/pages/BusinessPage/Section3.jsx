@@ -22,7 +22,7 @@ const tabContentFoodDelievry = useContext(MyContext)
 
     return (
         <section className='container mx-auto py-3 md:py-16 max-w-7xl wrap '>
-            <h1 className='text-center font-bold md:text-5xl text-2xl font-head md:mb-16 mb-12 text-[#3D3E3E]'>Our  <span className='text-[#E78353]'> Services </span></h1>
+            <h1 className='text-center font-bold md:text-5xl text-2xl font-head md:mb-16 mb-12 text-[#3D3E3E]'>Our  <span className='text-[#E78353] font-head'> Services </span></h1>
             <div className="grid md:grid-cols-12 gap-4">
                 <div className="md:col-span-3 bg-[#FFF5EF] rounded-2xl">
                     <ul className="tabList">
@@ -52,7 +52,7 @@ const tabContentFoodDelievry = useContext(MyContext)
                                             {link.prara}
                                         </div>
                                         <hr />
-                                        <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>{link.opening}<span className={`font-bold md:text-base text-xs text-[${link?.vacantColor}`}> {link?.vancant}</span></p>
+                                        <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-[#000] text-bold'>{link.opening}<span className={`font-bold md:text-base text-xs text-[${link?.vacantColor}`}> {link?.vancant}</span></p>
                                     </div>
                                 ))
                             }

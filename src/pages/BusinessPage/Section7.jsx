@@ -45,12 +45,12 @@ const Section7 = () => {
 
 
     return (
-        <section className='section7 container mx-auto md:py-10 py-2 px-4 bg-[#E78353] max-w-7xl wrap'>
+        <section className='section7 md:h-[758px] h-[647px] container mx-auto md:py-10 py-2 px-4 bg-[#E78353] max-w-7xl wrap'>
             <div className='grid md:grid-cols-6 grid-cols-6 '>
                 <div className="md:col-span-4 col-span-6 md:px-[102px] section7Content">
                 
-                    <h2 className='font-heading text-[#E78353] font-bold md:text-[42px] text-[28px] '>Leverage Your Business <br /> With Us!</h2>
-                    {step === 1 ? <form className='mt-6 flex flex-col gap-5 bg-white p-6 rounded-lg' onSubmit={handleSubmitStep1}>
+                    <h2 className='font-heading text-[#E78353] font-bold md:text-[42px] font-head text-[28px] '>Leverage Your Business <br /> With Us<span className='font-head font-thin'>!</span></h2><span></span>
+                    {step === 1 ? <form className='mt-6 flex flex-col gap-5 bg-white px-6 py-3 rounded-lg' onSubmit={handleSubmitStep1}><p className='md:hidden block text-[#3D3E3E] text-bold text-lg'>Personal Details</p>
                         <div className='flex items-center relative'>
                             <img src={user} alt="img" className='absolute ' />
                             <input type="text" placeholder='Full Name' className='w-full border-solid border-[#6E6E6E] rounded-md py-2 ps-10' name="name"
@@ -59,7 +59,7 @@ const Section7 = () => {
                         </div>
                         <div className="flex items-center relative">
                             <img src={phone} alt="phone" loading='lazy' className='absolute' />
-                            <input type="text" placeholder='Phone No.' className='w-full border-solid border-[#6E6E6E] rounded-md py-2 ps-10' name="phone"
+                            <input type="text" placeholder='Phone Number' className='w-full border-solid border-[#6E6E6E] rounded-md py-2 ps-10' name="phone"
                                 value={formData.phone}
                                 onChange={handleChange} />
                         </div>
@@ -82,8 +82,11 @@ const Section7 = () => {
                                 onChange={handleChange} />
                         </div>
                         <div className="relative items-center flex">
-                            <input className='bg-[#FA6F2C] rounded-3xl py-3 w-full text-white font-bold cursor-pointer' type="submit" value={"Next"} />
-                            <p className='absolute right-1 font-bold pe-10'><BsArrowRight color='#fff' /></p>
+                            {/* <input className='' type="submit" value={"Next"} /> */}
+                            <button type='submit' className='bg-[#FA6F2C] flex md:block items-center px-6 rounded-3xl py-2 md:w-full w-[40%] relative text-white font-bold cursor-pointer'>Next  <BsArrowRight color='#fff' className='md:hidden block absolute right-5  font-bold ' /> </button>
+                            {/* <p className='absolute md:right-1 right-[44%] font-bold pe-10'> */}
+                           
+                            {/* </p> */}
                         </div>
 
                     </form> : (

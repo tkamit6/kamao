@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./switchTabs.css";
 import { Link } from "react-router-dom";
+import { BsTelephone } from 'react-icons/bs'
+import { HiOutlineEnvelope } from 'react-icons/hi2'
 
 const SwitchTabs = () => {
     const [endpoint, setEndpoint] = useState("phone");
@@ -39,7 +41,8 @@ const SwitchTabs = () => {
                 </div>
             </div>
             <div className="flex items-center relative mb-3">
-                <input type="text" className="switchInput w-full bg-transparent border-solid border-2 border-white  rounded-lg px-3 py-2 text-white focus:outline-none" placeholder={selectedTab === 0 ? "Phone" : "Email"} />
+                <input type="text" className="switchInput w-full bg-transparent border-solid border-2 border-white  rounded-lg ps-10 py-2 text-white focus:outline-none relative " placeholder={selectedTab === 0 ? " Phone" : "Email"} />
+                <span className="absolute left-3 ">{selectedTab === 0 ? <BsTelephone /> : (<HiOutlineEnvelope className="text-xl mr-2" />)}</span>
                 <Link to="" className="absolute end-2 bg-[#FFF5EF] text-[#FA6F2C] font-bold text-sm px-6 py-1 rounded-lg">Get Link</Link>
             </div>
         </div>

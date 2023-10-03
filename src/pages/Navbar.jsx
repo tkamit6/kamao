@@ -33,7 +33,7 @@ const Navbar = () => {
                     {
                         Links.map((link) => (
                             <li key={link.name} className='md:ml-8 text-base md:my-0'>
-                                <NavLink to='/' className='text-gray-600 font-bold hover:text-gray-900 duration-200'> {link.name}</NavLink>
+                                <NavLink to='/' className='text-[#7C7C7C] font-bold hover:text-[#E16428] duration-200'> {link.name}</NavLink>
                             </li>
                         ))
                     }

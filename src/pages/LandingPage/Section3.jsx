@@ -41,17 +41,17 @@ const Section3 = () => {
             if (currentScrollPos > preState) {
                 if (currentScrollPos >= 1800 && scrollY <= 2000) {
                     setToggleState(3)
-                    console.log("active 2")
+                    // console.log("active 2")
                 } else if (currentScrollPos >= 1600 && scrollY <= 2000) {
                     setToggleState(2)
-                    console.log("active 2")
+                    // console.log("active 2")
                 }
                 else if (currentScrollPos >= 1400 && scrollY <= 2000) {
                     setToggleState(1)
-                    console.log("active 1")
+                    // console.log("active 1")
                 } else if (currentScrollPos >= 1150 && scrollY <= 2000) {
                     setToggleState(0)
-                    console.log("active 0")
+                    // console.log("active 0")
                 }
             }
         }
@@ -71,8 +71,8 @@ const Section3 = () => {
             <div className='stick-para'>
                 <div className="grid md:grid-cols-2 md:px-[102px] items-center ">
                     <div className="md:col-span-1 md:text-start text-center mx-auto md:w-[101%]">
-                        <h2 className='font-head text-[#E78353] font-bold md:text-[2.6rem] text-[1.6rem] leading-8 mb-2 md:leading-normal'>Generate an extra income</h2>
-                        <p className='text-[#7C7C7C] font-bold md:text-lg text-base -mb-8 md:mb-auto'>Complete small gigs and task and earn an extra income of upto 30,000</p>
+                        <h2 className='font-head text-[#E78353] md:w-[100%] w-[90%] md:mx-0 mx-auto font-bold md:text-[2.6rem] text-[1.6rem] leading-8 mb-3 md:leading-normal'>Generate an extra income</h2>
+                        <p className='text-[#7C7C7C] mx-2 font-bold md:text-lg text-base -mb-8 md:mb-auto'>Complete small gigs and task and earn an extra income of upto 30,000</p>
                         <div className='md:mt-10 md:block hidden '>
                             {
                                 ExtraIncome.map((data, id) => (
@@ -107,7 +107,10 @@ const Section3 = () => {
                 className="landSection2Swiper md:hidden block"
             >
                 {ExtraIncome.map((data, id) => (
-                    <SwiperSlide key={id}><img src={data?.mImg} alt="img" loading='lazy' className='-mb-10' />
+                    <SwiperSlide key={id} >
+                        <img src={data?.mImg} alt="img" loading='lazy' className='-mb-10 relative' />
+                        <div className="absolute top-[40%] left-5 -z-10 w-[60%] h-[30%] bg-[#FFEDE3] rounded-full"></div>
+                        <div className="absolute top-[20%] right-5 -z-10 w-[60%] h-[30%] bg-[#FFEDE3] rounded-full"></div>
                         <h3 key={id} className="text-[#3D3E3E] text-2xl font-bold w-[96%]  text-center mx-auto mb-2" >{data.heading}</h3>
                         <p className="font-medium text-[#7C7C7C] text-base w-[96%] mb-6 text-center mx-auto">{data.para}</p>
                         <div className='mx-auto text-center'>

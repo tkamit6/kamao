@@ -56,7 +56,7 @@ export default function Section6() {
                                     </div>
                                     <div className='relative items-center flex'>
                                         <img src={phoneIcon} alt="user" className='absolute' />
-                                        <input type="text" onChange={onChange} id='phone' placeholder='Phone' className='w-full border-solid !border-[#6E6E6E] rounded-md py-2 ps-10 focus:outline-[#E78353]' />
+                                        <input type="text" onChange={onChange} id='phone' placeholder='Phone Number' className='w-full border-solid !border-[#6E6E6E] rounded-md py-2 ps-10 focus:outline-[#E78353]' />
                                     </div>
                                     <div className='relative items-center flex'>
                                         <img src={mailIcon} alt="user" className='absolute' />
@@ -67,33 +67,33 @@ export default function Section6() {
                                         <input type="text" onChange={onChange} id='city' placeholder='City' className='w-full border-solid border-[#6E6E6E] rounded-md py-2 ps-10 focus:outline-[#E78353]' />
                                     </div>
                                     <div>
-                                        <p className='font-medium md:text-2xl text-lg text-[#3D3E3E] md:mb-6 mb-2'>Who Are You?</p>
-                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                        <p className='font-bold md:text-2xl text-lg text-[#3D3E3E] md:mb-6 mb-2'>Who Are You?</p>
+                                        <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
                                             <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Experienced field agent</span>
                                         </label>
-                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                        <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
                                             <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Entrepreneur</span>
                                         </label>
-                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                        <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
                                             <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Community leader (SHG, Mitra, Sahaj, etc.)</span>
                                         </label>
-                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                        <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
                                             <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">SMB business owner</span>
                                         </label>
-                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                        <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
                                             <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Agency owner/ manage</span>
                                         </label>
-                                        <label className="flex items-center checkbox-container md:mb-3 space-x-2">
+                                        <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
                                             <div class="checkmark"></div>
                                             <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">Other</span>

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import mobile from '../../images/mobile.png'
+import mobile from '../../images/mobile1.png'
 
 const Section11 = () => {
     return (
