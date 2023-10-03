@@ -70,7 +70,7 @@ const Section5 = () => {
                         slidesPerView={1.2}
                         spaceBetween={30}
                         freeMode={true}
-
+                        loop={true}
                         // grid={{
                         //     rows: 1,
                         // }}

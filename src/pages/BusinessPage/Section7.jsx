@@ -53,37 +53,37 @@ const Section7 = () => {
                     {step === 1 ? <form className='mt-6 flex flex-col gap-5 bg-white px-6 py-3 rounded-lg' onSubmit={handleSubmitStep1}><p className='md:hidden block text-[#3D3E3E] text-bold text-lg'>Personal Details</p>
                         <div className='flex items-center relative'>
                             <img src={user} alt="img" className='absolute ' />
-                            <input type="text" placeholder='Full Name' className='w-full border-solid border-[#6E6E6E] rounded-md py-2 ps-10' name="name"
+                            <input type="text" placeholder='Full Name' className='w-full focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10' name="name"
                                 value={formData.name}
                                 onChange={handleChange} />
                         </div>
                         <div className="flex items-center relative">
                             <img src={phone} alt="phone" loading='lazy' className='absolute' />
-                            <input type="text" placeholder='Phone Number' className='w-full border-solid border-[#6E6E6E] rounded-md py-2 ps-10' name="phone"
+                            <input type="text" placeholder='Phone Number' className='w-full focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10' name="phone"
                                 value={formData.phone}
                                 onChange={handleChange} />
                         </div>
                         <div className="flex items-center relative">
                             <img src={mail} alt="mail" className='absolute' loading='lazy' />
-                            <input type="text" placeholder='Email' className=' border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="email"
+                            <input type="text" placeholder='Email' className=' focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="email"
                                 value={formData.email}
                                 onChange={handleChange} />
                         </div>
                         <div className="flex items-center relative">
                             <img src={bag} alt="bag" loading='lazy' className='absolute' />
-                            <input type="text" placeholder='Job Title' className=' border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="job"
+                            <input type="text" placeholder='Job Title' className=' focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="job"
                                 value={formData.job}
                                 onChange={handleChange} />
                         </div>
                         <div className="flex items-center relative">
                             <img src={office} alt="office" loading='lazy' className='absolute' />
-                            <input type="text" placeholder='Company' className=' border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="company"
+                            <input type="text" placeholder='Company' className=' focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="company"
                                 value={formData.company}
                                 onChange={handleChange} />
                         </div>
                         <div className="relative items-center flex">
                             {/* <input className='' type="submit" value={"Next"} /> */}
-                            <button type='submit' className='bg-[#FA6F2C] flex md:block items-center px-6 rounded-3xl py-2 md:w-full w-[40%] relative text-white font-bold cursor-pointer'>Next  <BsArrowRight color='#fff' className='md:hidden block absolute right-5  font-bold ' /> </button>
+                            <button type='submit' className='bg-[#FA6F2C] focus:outline-[#FA6F2C] flex md:block items-center px-6 rounded-3xl py-2 md:w-full w-[40%] relative text-white font-bold cursor-pointer'>Next  <BsArrowRight color='#fff' className='md:hidden block absolute right-5  font-bold ' /> </button>
                             {/* <p className='absolute md:right-1 right-[44%] font-bold pe-10'> */}
                            
                             {/* </p> */}
@@ -93,21 +93,21 @@ const Section7 = () => {
                         <form onSubmit={handleSubmitStep2} className='mt-6 flex flex-col gap-3 bg-white p-6 rounded-lg' >
                             <div className="flex items-center relative">
                                 <img src={category} alt="category" loading='lazy' className='absolute' />
-                                <input type="text" placeholder='Category' className=' border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="category"
+                                <input type="text" placeholder='Category' className=' focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="category"
                                     value={formData.category}
                                     onChange={handleChange} />
                             </div>
                             <p className='text-[#3D3E3E] font-bold text-lg'>Estimate Budget?</p>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" value={"Less than 5 lakh"} className="accent-[#FA6F2C] checked:bg-blue-500" id="1" /><label htmlFor="1"> Less than 5 lakh </label>
+                                <input type="checkbox" value={"Less than 5 lakh"} className="accent-[#FA6F2C] checked:text-white " id="1" /><label htmlFor="1"> Less than 5 lakh </label>
                             </div>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" value={"Between 5 - 20 lakh"} className="accent-[#FA6F2C] checked:bg-blue-500" id="2" /><label htmlFor="2"> Between 5 - 20 lakh </label>
+                                <input type="checkbox" value={"Between 5 - 20 lakh"} className="accent-[#FA6F2C] " id="2" /><label htmlFor="2"> Between 5 - 20 lakh </label>
                             </div>
                             <div className='gap-3 flex'>
                                 <input type="checkbox" value={"More than 20 Lakh"} className="accent-[#FA6F2C] checked:bg-blue-500" id="3" /><label htmlFor='3'> More than 20 Lakh </label>
                             </div>
-                            <textarea name="message" id="message" cols="30" rows="4" value={formData.message} onChange={handleChange} className='border-solid border-[#6E6E6E] rounded-xl py-2 ps-5' placeholder='Describe your requirement in short.'></textarea>
+                            <textarea name="message" id="message" cols="30" rows="4" value={formData.message} onChange={handleChange} className='border-solid focus:outline-[#FA6F2C] border-[#6E6E6E] rounded-xl py-2 ps-5' placeholder='Describe your requirement in short.'></textarea>
                             <div className='flex gap-6'>
                                 <div className="flex items-center w-full relative">
                                     <p className='absolute ps-5'><BsArrowLeft color='#FA6F2C' /></p>
