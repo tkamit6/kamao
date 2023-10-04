@@ -1,6 +1,7 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const env = require('dotenv');
+const cors = require('cors');
 const bodyParser = require('body-parser');
 env.config()
 
@@ -9,6 +10,14 @@ const app = express()
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors(
+    {
+        origin:[""],
+        methods:["POST", "GET"],
+        credentials: true
+    }
+));
 
 app.get('/', (req, res) => {
     res.send("I am server")
