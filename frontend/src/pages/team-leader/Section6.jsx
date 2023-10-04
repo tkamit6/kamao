@@ -7,6 +7,9 @@ import loactionIcon from '../../images/team-leader/locationIcon.svg'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import axios from 'axios'
 import loadingSVG from '../../images/loading.svg'
+import Swal from 'sweetalert2/dist/sweetalert2.js'
+
+import 'sweetalert2/src/sweetalert2.scss'
 
 export default function Section6() {
     const [formStep, setformStep] = useState(1)
@@ -23,7 +26,7 @@ export default function Section6() {
         teamSize: '',
     })
 
-    const { managingTeamExpierence, teamSize, devoteProgram } = formData;
+    const { managingTeamExpierence, teamSize, devoteProgram, email } = formData;
 
     const onChange = (e) => {
         setformData({ ...formData, [e.target.id]: e.target.value })
@@ -31,18 +34,33 @@ export default function Section6() {
 
     const SubmitformStep1 = (e) => {
         e.preventDefault();
-        setformStep(2)
+        if(!email){
+            alert('Enter Valid Email')
+            return;
+        }
+            setformStep(2)
     }
+    const apiUrl = 'https://kamao-api.vercel.app';
     const finalformSubmit = async (e) => {
         e.preventDefault()
 
         try {
             setloading(true)
+           
             const res = await axios.post('https://kamao-api.vercel.app/sendmail', formData)
-            // .then(response=>{console.log(response)})
-            console.log(res);
+            .then(response=>{console.log(response)});
+
             setloading(false)
-            alert("sent")
+            Swal.fire({
+                icon: 'success',
+                title: 'Data Sent Successfully',
+                showConfirmButton: false,
+                timer: 1500
+              })
+            setformStep(1)
+            setformData({
+                // email:'',
+            })
         } catch (error) {
             setloading(false)
             console.log(error);
@@ -156,7 +174,6 @@ export default function Section6() {
                         }
 
                     </div>
-                    {/* {loading && (<h1 className=' text-6xl ' style={{ position: 'absolute', left: '50vw', top: '50vh' }} >Loading...</h1>)} */}
                 </div>
 
             </div>

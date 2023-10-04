@@ -9,6 +9,7 @@ export default defineConfig({
     proxy: {
       '/sendmail': {
         target: 'https://kamao-api.vercel.app/',
+        // target:'http://localhost:5000',
         secure: false,
         changeOrigin: true
       }

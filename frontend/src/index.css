@@ -15,6 +15,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
+  background-color: #FA6F2C;
+}
+div:where(.swal2-icon).swal2-success{
+  border-color: #FA6F2C;
+}
+div:where(.swal2-container).swal2-center > .swal2-popup{
+  border-radius: 30px;
+}
 
 section {
   padding: 1.5rem 0;
