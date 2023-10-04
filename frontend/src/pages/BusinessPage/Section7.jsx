@@ -7,10 +7,17 @@ import office from '../../images/form/office.svg'
 import category from '../../images/form/category.svg'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import axios from 'axios';
+import loadingSVG from '../../images/loading.svg';
+import 'react-toastify/dist/ReactToastify.css';
+
+import 'sweetalert2/src/sweetalert2.scss'
+import { ToastContainer, toast } from 'react-toastify'
+
 
 const Section7 = () => {
 
     const [step, setStep] = useState(1);
+    const [loading, setloading] = useState(false)
     const [formData, setFormData] = useState({
         fullname: '',
         email: '',
@@ -19,7 +26,7 @@ const Section7 = () => {
         company: '',
         category: '',
         message: '',
-        budget:''
+        budget: ''
     });
 
     const handleChange = (e) => {
@@ -33,18 +40,27 @@ const Section7 = () => {
     const handleSubmitStep1 = (e) => {
         e.preventDefault();
 
-        // if (!formData.name || !formData.phone || !formData.email || !formData.job || !formData.company ) {
-        //     alert("Fill the details")
-        //     return false
-        // }
+        if (!formData.email ) {
+            alert("Enter Valid Email")
+            return false
+        }
         setStep(2);
     };
 
     const handleSubmitStep2 = async (e) => {
         e.preventDefault();
         try {
+            setloading(true)
             const res = await axios.post('/sendmail/business', formData).then(res => console.log(res));
+            toast.success('Data sent successfully!')
+            setloading(false)
+            setStep(1)
+            setFormData({
+                
+            })
         } catch (error) {
+            setloading(false)
+            toast.error('Something went wrong!')
             console.log(error);
         }
 
@@ -102,13 +118,13 @@ const Section7 = () => {
                             </div>
                             <p className='text-[#3D3E3E] font-bold text-lg'>Estimate Budget?</p>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" value={"Less than 5 lakh"} className="accent-[#FA6F2C] checked:text-white" name='5 lakh'  id="1" /><label htmlFor="1" onChange={handleChange} > Less than 5 lakh </label>
+                                <input type="checkbox" value={"Less than 5 lakh"} className="accent-[#FA6F2C] checked:text-white" name='5 lakh' id="1" /><label htmlFor="1" onChange={handleChange} > Less than 5 lakh </label>
                             </div>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" value={"Between 5 - 20 lakh"} className="accent-[#FA6F2C] " id="2" name='5-20 lakh'  onChange={handleChange} /><label htmlFor="2"> Between 5 - 20 lakh </label>
+                                <input type="checkbox" value={"Between 5 - 20 lakh"} className="accent-[#FA6F2C] " id="2" name='5-20 lakh' onChange={handleChange} /><label htmlFor="2"> Between 5 - 20 lakh </label>
                             </div>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" value={"More than 20 Lakh"} className="accent-[#FA6F2C] checked:bg-blue-500" id="3" name='20 lakh'  onChange={handleChange} /><label htmlFor='3'> More than 20 Lakh </label>
+                                <input type="checkbox" value={"More than 20 Lakh"} className="accent-[#FA6F2C] checked:bg-blue-500" id="3" name='20 lakh' onChange={handleChange} /><label htmlFor='3'> More than 20 Lakh </label>
                             </div>
                             <textarea name="message" id="message" cols="30" rows="4" value={formData.message} onChange={handleChange} className='border-solid focus:outline-[#FA6F2C] border-[#6E6E6E] rounded-xl py-2 ps-5' placeholder='Describe your requirement in short.'></textarea>
                             <div className='flex gap-6'>
@@ -117,8 +133,7 @@ const Section7 = () => {
                                     <button onClick={() => setStep(1)} className='bg-white ps-7 rounded-3xl w-full py-2 text-[#FA6F2C] border-2 border-solid border-[#FA6F2C] font-bold cursor-pointer' type="submit">Previous</button>
                                 </div>
                                 <div className="flex items-center w-full relative">
-                                    <p className='absolute right-1 pe-4'><BsArrowRight color='#fff' /></p>
-                                    <button className='bg-[#FA6F2C] rounded-3xl pe-6 w-full py-2 text-white font-bold cursor-pointer' type="submit">Submit</button>
+                                    <button className='bg-[#FA6F2C] flex justify-center rounded-3xl px-6 w-full py-2 text-white font-bold cursor-pointer' type="submit">{loading ? (<img src={loadingSVG} alt='loading' className='h-6 w-6' />) : 'Submit'}</button>
                                 </div>
                             </div>
                         </form>
@@ -126,6 +141,18 @@ const Section7 = () => {
                 </div>
                 {/* <div className="col-span-2"></div> */}
             </div>
+            <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </section>
     )
 }

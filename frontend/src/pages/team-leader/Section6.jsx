@@ -7,7 +7,8 @@ import loactionIcon from '../../images/team-leader/locationIcon.svg'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
 import axios from 'axios'
 import loadingSVG from '../../images/loading.svg'
-import Swal from 'sweetalert2/dist/sweetalert2.js'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import 'sweetalert2/src/sweetalert2.scss'
 
@@ -34,11 +35,11 @@ export default function Section6() {
 
     const SubmitformStep1 = (e) => {
         e.preventDefault();
-        if(!email){
+        if (!email) {
             alert('Enter Valid Email')
             return;
         }
-            setformStep(2)
+        setformStep(2)
     }
     const apiUrl = 'https://kamao-api.vercel.app';
     const finalformSubmit = async (e) => {
@@ -46,23 +47,18 @@ export default function Section6() {
 
         try {
             setloading(true)
-           
+
             const res = await axios.post('https://kamao-api.vercel.app/sendmail', formData)
-            .then(response=>{console.log(response)});
+                .then(response => { console.log(response) });
 
             setloading(false)
-            Swal.fire({
-                icon: 'success',
-                title: 'Data Sent Successfully',
-                showConfirmButton: false,
-                timer: 1500
-              })
+            toast.success('Data Sent Successfully!')
             setformStep(1)
             setformData({
-                // email:'',
             })
         } catch (error) {
             setloading(false)
+            toast.error('Something went wrong!')
             console.log(error);
         }
     }
@@ -163,20 +159,28 @@ export default function Section6() {
                                         <p className='md:font-medium font-bold md:text-2xl text-lg md:mb-6 mb-3 text-[#3D3E3E] md:leading-[28px] leading-[22px]'>Share a brief about your past industry.</p>
                                         <textarea onChange={onChange} cols='4' rows='5' type="text" id='briefIndustry' placeholder='Write here' className='w-full border-solid border-[#6E6E6E] rounded-md p-4  focus:outline-[#E78353]' />
                                     </div>
-
-
                                     <div className='flex space-x-4'>
                                         <button type='button' onClick={() => setformStep(1)} className='bg-white text-[#FA6F2C] gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-5 me-2 relative border border-[#FA6F2C] font-bold cursor-pointer'><BsArrowLeft color='#fff absolute' /> Previous  </button>
-                                        <button type='submit' className='bg-[#FA6F2C] text-white gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-9 me-2 relative border border-[#FA6F2C] font-bold cursor-pointer'> {loading ? (<img src={loadingSVG} alt='loading' className='h-6 w-6'/>) : 'Submit'}  </button>
+                                        <button type='submit' className='bg-[#FA6F2C] text-white gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-9 me-2 relative border border-[#FA6F2C] font-bold cursor-pointer'> {loading ? (<img src={loadingSVG} alt='loading' className='h-6 w-6' />) : 'Submit'}  </button>
                                     </div>
                                 </form>
                             )
                         }
-
                     </div>
                 </div>
-
             </div>
-        </section >
+            <ToastContainer
+                position="bottom-center"
+                autoClose={2000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
+        </section>
     )
 }
