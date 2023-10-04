@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(cors(
     {
-        origin:[""],
+        origin:["https://kamao-frontend.vercel.app/"],
         methods:["POST", "GET"],
         credentials: true
     }
