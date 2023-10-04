@@ -89,7 +89,7 @@ const Section5 = () => {
                                     </div>
                                     <div className='flex flex-col'>
                                         <h5 className='text-[#3D3E3E] text-base font-bold'>{data.name}</h5>
-                                        <p className='text-[#7C7C7C] font-bold text-base'>{data.salary}</p>
+                                        <p className='text-[#7C7C7C] font-bold text-sm'>{data.salary}</p>
                                     </div>
                                 </div>
                             </SwiperSlide>
@@ -99,7 +99,7 @@ const Section5 = () => {
                 </div>
 
                 <div className='mx-auto flex items-center justify-center relative mt-10'>
-                    <Link to='' className='text-[#FA6F2C] relative items-center p-5 md:w-[16%] w-[52%] rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Apply to jobs now <BsArrowRight className='absolute  top-3 right-5' /> </Link>
+                    <Link to='' className='text-[#FA6F2C] relative items-center px-5 md:w-[15%] w-[52%] rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Apply to jobs now <BsArrowRight className='absolute  top-3 right-5' /> </Link>
                 </div>
             </div>
         </section>

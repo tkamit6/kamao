@@ -4,11 +4,13 @@ import userIcon from '../../images/team-leader/userIcon.svg'
 import phoneIcon from '../../images/team-leader/phoneIcon.svg'
 import mailIcon from '../../images/team-leader/mailIcon.svg'
 import loactionIcon from '../../images/team-leader/locationIcon.svg'
-import { Link } from 'react-router-dom'
 import { BsArrowLeft, BsArrowRight } from 'react-icons/bs'
+import axios from 'axios'
+import loadingSVG from '../../images/loading.svg'
 
 export default function Section6() {
     const [formStep, setformStep] = useState(1)
+    const [loading, setloading] = useState(false)
 
     const [formData, setformData] = useState({
         fullname: '',
@@ -17,8 +19,8 @@ export default function Section6() {
         city: '',
         briefIndustry: '',
         managingTeamExpierence: '',
-        devoteProgram:'',
-        teamSize:'',
+        devoteProgram: '',
+        teamSize: '',
     })
 
     const { managingTeamExpierence, teamSize, devoteProgram } = formData;
@@ -31,15 +33,27 @@ export default function Section6() {
         e.preventDefault();
         setformStep(2)
     }
-    const finalformSubmit = (e) => {
+    const finalformSubmit = async (e) => {
         e.preventDefault()
-        console.log(formData);
+
+        try {
+            setloading(true)
+            const res = await axios.post('/sendmail', formData)
+            // .then(response=>{console.log(response)})
+            console.log(res);
+            setloading(false)
+            alert("sent")
+        } catch (error) {
+            setloading(false)
+            console.log(error);
+        }
     }
 
     return (
         <section className='team-enroll container mx-auto md:mb-8 md:my-8 md:py-10 bg-[#FFF5EF] py-4 max-w-7xl wrap '>
             <div className='md:py-16 md:mx-[102px]'>
-                <div className='md:grid md:grid-cols-12 md:space-x-16 md:mx-0 mx-4'>
+
+                <div className='md:grid md:grid-cols-12 md:space-x-16 md:mx-0 mx-4 relative'>
                     <div className="col-span-5 md:text-start text-center md:mb-auto mb-6 mx-auto md:w-full w-[93%]">
                         <h2 className='text-[#E78353] font-bold md:text-[42px] text-[2rem] font-head'>Enroll Now</h2>
                         <p className='text-[#7C7C7C] font-medium md:text-lg text-base'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies </p>
@@ -70,32 +84,32 @@ export default function Section6() {
                                         <p className='font-bold md:text-2xl text-lg text-[#3D3E3E] md:mb-6 mb-2'>Who Are You?</p>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
-                                            <div class="checkmark"></div>
+                                            <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Experienced field agent</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
-                                            <div class="checkmark"></div>
+                                            <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Entrepreneur</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
-                                            <div class="checkmark"></div>
+                                            <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Community leader (SHG, Mitra, Sahaj, etc.)</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
-                                            <div class="checkmark"></div>
+                                            <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">SMB business owner</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
-                                            <div class="checkmark"></div>
+                                            <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Agency owner/ manage</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
                                             <input type="checkbox" className="" />
-                                            <div class="checkmark"></div>
+                                            <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">Other</span>
                                         </label>
                                         <button type='submit' className='bg-[#FA6F2C] gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-6 me-2 relative text-white font-bold cursor-pointer'>Next <BsArrowRight color='#fff absolute' /> </button>
@@ -135,12 +149,14 @@ export default function Section6() {
 
                                     <div className='flex space-x-4'>
                                         <button type='button' onClick={() => setformStep(1)} className='bg-white text-[#FA6F2C] gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-5 me-2 relative border border-[#FA6F2C] font-bold cursor-pointer'><BsArrowLeft color='#fff absolute' /> Previous  </button>
-                                        <button type='submit' className='bg-[#FA6F2C] text-white gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-9 me-2 relative border border-[#FA6F2C] font-bold cursor-pointer'> Submit  </button>
+                                        <button type='submit' className='bg-[#FA6F2C] text-white gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-9 me-2 relative border border-[#FA6F2C] font-bold cursor-pointer'> {loading ? (<img src={loadingSVG} alt='loading' className='h-6 w-6'/>) : 'Submit'}  </button>
                                     </div>
                                 </form>
                             )
                         }
+
                     </div>
+                    {/* {loading && (<h1 className=' text-6xl ' style={{ position: 'absolute', left: '50vw', top: '50vh' }} >Loading...</h1>)} */}
                 </div>
 
             </div>
