@@ -38,7 +38,7 @@ export default function Section6() {
 
         try {
             setloading(true)
-            const res = await axios.post('/sendmail', formData)
+            const res = await axios.post('https://kamao.vercel.app/sendmail', formData)
             // .then(response=>{console.log(response)})
             console.log(res);
             setloading(false)
