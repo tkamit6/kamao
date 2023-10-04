@@ -54,7 +54,6 @@ app.post('/sendmail', async (req, res) => {
             html: `${daraArray}`
 
         })
-
         //  console.log(info);
         res.send("Mail sent")
         console.log("mail sent");
@@ -62,6 +61,47 @@ app.post('/sendmail', async (req, res) => {
         console.log(error);
     }
 })
+
+
+app.post('/sendmail/business', async (req, res) => {
+    console.log(req.body);
+    const { fullname, phone, email, company, category, message, budget, job } = req.body;
+    const daraArray = [
+        `Fullname: ${fullname}`,
+        `<br/> Phone: ${phone}`,
+        `<br/> Email: ${email}`,
+        `<br/> Company: ${company}`,
+        `<br/> Category: ${category}`,
+        `<br/> Message: ${message}`,
+        `<br/> Budget: ${budget}`,
+        `<br/> Job: ${job}`,
+    ]
+    try {
+        const transporter = await nodemailer.createTransport({
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
+            auth: {
+                user: process.env.user,
+                pass: process.env.pass
+            },
+        });
+        const info = await transporter.sendMail({
+            from: `"${fullname}" <${email}>`, // sender address
+            to: "tkamit6@gmail.com", // list of receivers
+            subject: "Kamaao - Business", // Subject line
+            text: `${fullname}`, // plain text body
+            html: `${daraArray}`
+
+        })
+        //  console.log(info);
+        res.send("Mail sent")
+        console.log("mail sent");
+    } catch (error) {
+        console.log(error);
+    }
+})
+
 
 const start = async () => {
     try {
