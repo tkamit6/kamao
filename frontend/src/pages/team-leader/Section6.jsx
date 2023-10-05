@@ -10,8 +10,6 @@ import loadingSVG from '../../images/loading.svg'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import 'sweetalert2/src/sweetalert2.scss'
-
 export default function Section6() {
     const [formStep, setformStep] = useState(1)
     const [loading, setloading] = useState(false)

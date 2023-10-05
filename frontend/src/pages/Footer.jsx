@@ -8,6 +8,7 @@ import YtIcon from '../images/youtube.svg'
 import whatsAppIcon from '../images/whatsapp.svg'
 import AppleStore from '../images/AppStore.svg'
 import PLayStore from '../images/playStore.svg'
+import footerPhone from '../images/phone.webp'
 
 export const Footer = () => {
 
@@ -52,11 +53,12 @@ export const Footer = () => {
     ]
 
     return (
-        <footer className='container md:mx-auto md:bg-white md:pb-16 pb-6 text-white md:rounded-3xl rounded-lg wrap px-4 '>
+        <footer className='container md:mx-auto md:bg-white md:mt-72 md:pb-16 md:pt-52 pb-6 text-white md:rounded-3xl rounded-lg wrap px-4 '>
             <div className='grid md:grid-cols-12'>
                 <div className=' md:col-span-1'></div>
                 <div className="col-span-2 md:col-span-4 mx-auto md:mx-0 z-10 md:pb-0 pb-16 text-center">
-                    <div className='md:w-fit w-[93%] z-10 relative md:pt-[20rem]'>
+                    <div className='md:w-fit w-[93%] z-10 relative md:pt-[15rem] '>
+                        <img src={footerPhone} alt="phone" className='absolute top-[-100%] left-0 w-[600px] md:block hidden' />
                         <p className='md:text-xl text-[1.75rem] md:text-start text-center font-bold md:mb-3 mb-7'>Get Download Link On your Phone</p>
                         <SwitchTabs />
                         <hr className='mx-28 mb-3' />
@@ -124,7 +126,7 @@ export const Footer = () => {
                     </ul>
 
                     <div className='md:hidden grid text-center text-xs mx-auto'>
-                    <Link to="/" className='mb-2'> @2023 kamaao. All rights reserved.</Link>
+                        <Link to="/" className='mb-2'> @2023 kamaao. All rights reserved.</Link>
                         <ul className='flex flex-row mx-auto md:gap-5 gap-2'>
                             <li className='after:content-["|"] after:ml-5 after:text-white'><Link to="/"> Privacy Policy</Link></li>
                             <li className='after:content-["|"] after:ml-5 after:text-white'>support@kamaao.in</li>

@@ -10,7 +10,7 @@ import mobile from '../../images/mobile.webp'
 
 const Section9 = () => {
     return (
-        <section className='section9 container mx-auto md:py-16 max-w-7xl wrap '>
+        <section className='business-section9 container mx-auto md:py-16 max-w-7xl wrap '>
             <div className="grid md:grid-cols-4 py-5 md:px-[102px]">
                 <div className='col-span-2'>
                 <div className='md:mb-12 mb-auto'>

@@ -5,8 +5,8 @@ import mobile from '../../images/mobile1.webp'
 const Section11 = () => {
     return (
         <section className='section9 container mx-auto md:py-16 max-w-7xl wrap '>
-            <div className="grid md:grid-cols-4 py-5 md:px-[102px]">
-                <div className='col-span-2'>
+            <div className="grid md:grid-cols-12 py-5 md:px-[102px]">
+                <div className='md:col-span-6 col-span-2'>
                     <div className='space-y-3'>
                         <h1 className='text-[#E78353] font-bold md:text-[2.6rem] text-[1.75rem] md:text-start text-center font-head md:-mt-[36rem]'>Learn New Skills In the Simplest Way Possible </h1>
                         <p className='text-[#7C7C7C] md:font-bold font-medium md:text-start text-center text-base md:text-lg'>Now Get new skills with the help of our specially curated content & increase your salary.</p>
@@ -31,9 +31,9 @@ const Section11 = () => {
                         <Link to="/" className='rounded-3xl font-bold bg-white px-4 py-2 border-[#E78353] border-2 text-[#E78353]'>Start Learning Now</Link>
                     </div>
                 </div>
-                {/* <div className="col-span-2">
-s
-            </div> */}
+                {/* <div className="md:col-span-4 col-span-2"> */}
+                    {/* <img src={mobile} alt="mobile" /> */}
+                {/* </div> */}
             </div>
 
         </section>

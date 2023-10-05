@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Section9 = () => {
     return (
-        <section className='landingPageSection9 landingPage9 container mx-auto bg-[#FFF5EF] rounded-3xl md:py-16 max-w-7xl wrap '>
+        <section className='landingPageSection9 container mx-auto rounded-3xl md:py-16 max-w-7xl wrap '>
             <div className="grid md:mx-[102px] md:grid-cols-7 gap-2 items-center">
                 <div className="col-span-4 md:mx-0 mx-auto w-[90%]">
                     <h3 className='text-[#E78353] md:text-start text-center md:mx-0 mx-auto mb-6 font-head font-bold md:text-[42px] md:leading-[40px] text-[28px]'>Why Choose the Kamaao  App ?</h3>

@@ -28,14 +28,26 @@ div:where(.swal2-container).swal2-center > .swal2-popup{
 section {
   padding: 1.5rem 0;
 }
+.landSection7-bg{
+  background: url('./images/landingPage/bg-landsect7.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+}
+.landsection11{
+  background: url('./images/landingPage/bg-landsect11.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+}
 
 footer {
-  padding-top: 32rem !important;
-  background-image: url('./images/Footer-Background1.png');
+  background-image: url('./images/footer-bg.webp');
   background-repeat: no-repeat;
-  /* background-position: center; */
+  background-position: center;
   background-size: cover;
-  /* width: 100%; */
 }
 
 .Typewriter__wrapper {
@@ -224,10 +236,17 @@ textarea {
 
 .section9 {
   padding-top: 46rem !important;
-  background-image: url('./images/Frame-2609149.png');
+  background-image: url('./images/landingPage/bg-landsect11.webp');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100% !important;
+  /* width: 100% !important; */
+}
+.business-section9 {
+  padding-top: 46rem !important;
+  background-image: url('./images/bg-business-section9.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100% !important; */
 }
 
 .switchInput::placeholder {
@@ -409,9 +428,11 @@ textarea {
 .landingSection5 .slick-arrow {
   display: none;
 }
-
-.landingPage9 {
-  position: relative;
+.landingPageSection9{
+  background: url('./images/landingPage/bg-landingPageSection9.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .comment-div {
@@ -541,6 +562,14 @@ textarea {
   .section9 {
     padding: 1rem !important;
     background-image: url(/src/images/Frame-2609149.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .business-section9 {
+    padding: 1rem !important;
+    background-image: url('./images/bg-business-section9.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

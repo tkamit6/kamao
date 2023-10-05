@@ -56,9 +56,9 @@ const Section7 = () => {
     }
 
     return (
-        <section className='landSection7 container mx-auto md:py-4 max-w-7xl wrap bg-[#FFF5EF] rounded-2xl'>
+        <section className='landSection7 container mx-auto md:py-4 max-w-7xl wrap rounded-2xl'>
             <div className='stick-para'>
-                <div className="grid md:grid-cols-2 md:px-[102px] items-center ">
+                <div className="grid md:grid-cols-2 landSection7-bg md:px-[102px] md:py-0 py-6 items-center ">
                     <div className="md:col-span-1 md:my-auto -my-10 ">
                         <img src={ExtraIncome[toggleState]?.img} alt="img" loading='lazy' className='md:block hidden md:h-[41rem]' />
                     </div>

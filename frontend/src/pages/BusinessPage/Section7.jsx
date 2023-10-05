@@ -10,7 +10,6 @@ import axios from 'axios';
 import loadingSVG from '../../images/loading.svg';
 import 'react-toastify/dist/ReactToastify.css';
 
-import 'sweetalert2/src/sweetalert2.scss'
 import { ToastContainer, toast } from 'react-toastify'
 
 
