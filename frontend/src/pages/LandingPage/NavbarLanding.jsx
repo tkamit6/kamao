@@ -53,6 +53,10 @@ const Navbar = () => {
         if (route === location.pathname) {
             return true;
         }
+        window.scrollTo({
+            top:0,
+            behavior:'smooth'
+        })
     }
 
 

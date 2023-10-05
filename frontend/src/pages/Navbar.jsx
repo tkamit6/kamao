@@ -7,7 +7,7 @@ import menu from '../images/menu.svg'
 const Navbar = () => {
     let Links = [
         { name: "Service", link: "/" },
-        { name: "How it works's", link: "/" },
+        { name: "How it works", link: "/" },
         { name: "Why Us?", link: "/" },
         { name: "Projects", link: "/" },
     ];

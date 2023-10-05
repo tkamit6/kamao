@@ -51,7 +51,7 @@ const tabContentFoodDelievry = useContext(MyContext)
                                         <div className='p font-normal md:text-base text-[10px] md:py-3 py-2 '>
                                             {link.prara}
                                         </div>
-                                        <hr />
+                                        <hr  className='border'/>
                                         <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-[#000] text-bold'>{link.opening}<span className={`font-bold md:text-base text-xs text-[${link?.vacantColor}`}> {link?.vancant}</span></p>
                                     </div>
                                 ))
@@ -66,7 +66,7 @@ const tabContentFoodDelievry = useContext(MyContext)
                                         <div className='p font-normal md:text-base text-[10px] md:py-3 py-2'>
                                             {link.prara}
                                         </div>
-                                        <hr />
+                                        <hr className='border'/>
                                         <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>{link.opening}<span className='font-bold md:text-base text-xs'> {link.vancant}</span></p>
                                     </div>
                                 ))
