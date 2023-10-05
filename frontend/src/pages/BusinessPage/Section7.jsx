@@ -140,13 +140,13 @@ const Section7 = () => {
                             </div>
                             <p className='text-[#3D3E3E] font-bold text-lg'>Estimate Budget?</p>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" className="accent-[#FA6F2C] checked:text-white" name='5 lakh' id="1"  value="Less than 5 lakh" /><label htmlFor="1" > Less than 5 lakh </label>
+                                <input type="checkbox" className="accent-[#FA6F2C] checked:text-white" name='5 lakh' id="1"  value="Less than 5 lakh" onChange={handleChange} /><label htmlFor="1" > Less than 5 lakh </label>
                             </div>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" value="Between 5 - 20 lakh" className="accent-[#FA6F2C] " id="2" name='5-20 lakh'  /><label htmlFor="2"> Between 5 - 20 lakh </label>
+                                <input type="checkbox" value="Between 5 - 20 lakh" className="accent-[#FA6F2C] " id="2" name='5-20 lakh'onChange={handleChange}  /><label htmlFor="2"> Between 5 - 20 lakh </label>
                             </div>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" value="More than 20 Lakh" className="accent-[#FA6F2C] checked:bg-blue-500" id="3" name='20 lakh'  /><label htmlFor='3'> More than 20 Lakh </label>
+                                <input type="checkbox" value="More than 20 Lakh" className="accent-[#FA6F2C] checked:bg-blue-500" id="3" name='20 lakh' onChange={handleChange} /><label htmlFor='3'> More than 20 Lakh </label>
                             </div>
                             <textarea name="message" id="message" cols="30" rows="4" value={formData.message} onChange={handleChange} className='border-solid focus:outline-[#FA6F2C] border-[#6E6E6E] rounded-xl py-2 ps-5' placeholder='Describe your requirement in short.'></textarea>
                             <div className='flex gap-6'>

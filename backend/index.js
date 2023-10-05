@@ -76,7 +76,7 @@ app.post('/sendmail/business', async (req, res) => {
         `<br/> Category: ${category}`,
         `<br/> Message: ${message}`,
         `<br/> Job: ${job}`,
-        // `<br/> Estimate Budget: ${req.body.EstimateBudget}`,
+        `<br/> Estimate Budget: ${req.body.EstimateBudget}`,
     ]
     console.log(message,EstimateBudget );
 
@@ -95,7 +95,7 @@ app.post('/sendmail/business', async (req, res) => {
             to: "amit.digioffice@gmail.com", // list of receivers
             subject: "Kamaao - Business", // Subject line
             text: `${fullname}`, // plain text body
-            html: `${daraArray}`
+            html: `${daraArray.join('<br/>')}`
 
         })
         //  console.log(info);
