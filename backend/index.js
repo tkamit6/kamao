@@ -25,7 +25,8 @@ app.get('/', (req, res) => {
 
 app.post('/sendmail', async (req, res) => {
     // console.log(req.body);
-    const { fullname, phone, email, city, briefIndustry, managingTeamExpierence, devoteProgram, teamSize } = req.body;
+    const { fullname, phone, email, city, briefIndustry, managingTeamExpierence, devoteProgram, teamSize, whoArYou
+    } = req.body;
     const daraArray = [
         `Fullname: ${fullname}`,
         `<br/> Phone: ${phone}`,
@@ -35,6 +36,7 @@ app.post('/sendmail', async (req, res) => {
         `<br/> Managing Team Experience: ${managingTeamExpierence}`,
         `<br/> Devote Program per day: ${devoteProgram}`,
         `<br/> Team Size: ${teamSize}`,
+        `<br/> Who Are You: ${whoArYou}`,
     ]
     try {
         const transporter = await nodemailer.createTransport({
@@ -48,7 +50,7 @@ app.post('/sendmail', async (req, res) => {
         });
         const info = await transporter.sendMail({
             from: `"${fullname}" <${email}>`, // sender address
-            to: ["sumitmca11@gmail.com", "amit.digioffice@gmail.com", "manishdigi9031@gmail.com"], // list of receivers
+            to: ["amit.digioffice@gmail.com"], // list of receivers "manishdigi9031@gmail.com"
             subject: "Kamaao - Team Leader", // Subject line
             text: `${fullname}`, // plain text body
             html: `${daraArray}`
@@ -65,7 +67,7 @@ app.post('/sendmail', async (req, res) => {
 
 app.post('/sendmail/business', async (req, res) => {
     console.log(req.body);
-    const { fullname, phone, email, company, category, message, budget, job } = req.body;
+    const { fullname, phone, email, company, category, message, job, EstimateBudget } = req.body;
     const daraArray = [
         `Fullname: ${fullname}`,
         `<br/> Phone: ${phone}`,
@@ -73,9 +75,11 @@ app.post('/sendmail/business', async (req, res) => {
         `<br/> Company: ${company}`,
         `<br/> Category: ${category}`,
         `<br/> Message: ${message}`,
-        `<br/> Budget: ${budget}`,
         `<br/> Job: ${job}`,
+        `<br/> Estimate Budget: ${req.body.EstimateBudget}`,
     ]
+    console.log(message,EstimateBudget );
+
     try {
         const transporter = await nodemailer.createTransport({
             host: 'smtp.gmail.com',
@@ -88,7 +92,7 @@ app.post('/sendmail/business', async (req, res) => {
         });
         const info = await transporter.sendMail({
             from: `"${fullname}" <${email}>`, // sender address
-            to: ["sumitmca11@gmail.com", "amit.digioffice@gmail.com", "manishdigi9031@gmail.com"], // list of receivers
+            to: "amit.digioffice@gmail.com", // list of receivers
             subject: "Kamaao - Business", // Subject line
             text: `${fullname}`, // plain text body
             html: `${daraArray}`
