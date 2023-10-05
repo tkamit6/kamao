@@ -36,7 +36,7 @@ app.post('/sendmail', async (req, res) => {
         `<br/> Managing Team Experience: ${managingTeamExpierence}`,
         `<br/> Devote Program per day: ${devoteProgram}`,
         `<br/> Team Size: ${teamSize}`,
-        `<br/> Who Are You: ${whoArYou}`,
+        // `<br/> Who Are You: ${whoArYou}`,
     ]
     try {
         const transporter = await nodemailer.createTransport({
@@ -76,7 +76,7 @@ app.post('/sendmail/business', async (req, res) => {
         `<br/> Category: ${category}`,
         `<br/> Message: ${message}`,
         `<br/> Job: ${job}`,
-        `<br/> Estimate Budget: ${req.body.EstimateBudget}`,
+        // `<br/> Estimate Budget: ${req.body.EstimateBudget}`,
     ]
     console.log(message,EstimateBudget );
 
