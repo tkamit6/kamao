@@ -48,7 +48,7 @@ app.post('/sendmail', async (req, res) => {
         });
         const info = await transporter.sendMail({
             from: `"${fullname}" <${email}>`, // sender address
-            to: "tkamit6@gmail.com, amit.digioffice@gmail.com", // list of receivers
+            to: ["sumitmca11@gmail.com", "amit.digioffice@gmail.com", "manishdigi9031@gmail.com"], // list of receivers
             subject: "Kamaao - Team Leader", // Subject line
             text: `${fullname}`, // plain text body
             html: `${daraArray}`
@@ -88,7 +88,7 @@ app.post('/sendmail/business', async (req, res) => {
         });
         const info = await transporter.sendMail({
             from: `"${fullname}" <${email}>`, // sender address
-            to: "tkamit6@gmail.com", // list of receivers
+            to: ["sumitmca11@gmail.com", "amit.digioffice@gmail.com", "manishdigi9031@gmail.com"], // list of receivers
             subject: "Kamaao - Business", // Subject line
             text: `${fullname}`, // plain text body
             html: `${daraArray}`
