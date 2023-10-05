@@ -115,32 +115,32 @@ export default function Section6() {
                                     <div>
                                         <p className='font-bold md:text-2xl text-lg text-[#3D3E3E] md:mb-6 mb-2'>Who Are You?</p>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Experienced field agent'   />
+                                            <input type="checkbox" className="" name='who are you' value='Experienced field agent' onChange={onChange}  />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Experienced field agent</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Entrepreneur'   />
+                                            <input type="checkbox" className="" name='who are you' value='Entrepreneur' onChange={onChange}  />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Entrepreneur</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Community leader'   />
+                                            <input type="checkbox" className="" name='who are you' value='Community leader' onChange={onChange}  />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Community leader (SHG, Mitra, Sahaj, etc.)</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='SMB business owner'   />
+                                            <input type="checkbox" className="" name='who are you' value='SMB business owner' onChange={onChange}  />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">SMB business owner</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Agency owner/ manage'   />
+                                            <input type="checkbox" className="" name='who are you' value='Agency owner/ manage'  onChange={onChange} />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Agency owner/ manage</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Other'   />
+                                            <input type="checkbox" className="" name='who are you' value='Other' onChange={onChange}  />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">Other</span>
                                         </label>
