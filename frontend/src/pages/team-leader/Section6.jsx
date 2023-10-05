@@ -23,7 +23,7 @@ export default function Section6() {
         managingTeamExpierence: '',
         devoteProgram: '',
         teamSize: '',
-        // whoArYou:[],
+        whoArYou:[],
     })
 
     const { managingTeamExpierence, teamSize, devoteProgram, email } = formData;
