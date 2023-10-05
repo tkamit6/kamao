@@ -53,7 +53,7 @@ app.post('/sendmail', async (req, res) => {
             to: ["amit.digioffice@gmail.com"], // list of receivers "manishdigi9031@gmail.com"
             subject: "Kamaao - Team Leader", // Subject line
             text: `${fullname}`, // plain text body
-            html: `${daraArray}`
+            html: `${daraArray.join('<br/>')}`
 
         })
         //  console.log(info);
