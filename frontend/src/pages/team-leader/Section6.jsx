@@ -53,7 +53,8 @@ export default function Section6() {
 
     const SubmitformStep1 = (e) => {
         e.preventDefault();
-        if (!email) {
+        let EmailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!email.match(EmailRegex)) {
             alert('Enter Valid Email')
             return;
         }
