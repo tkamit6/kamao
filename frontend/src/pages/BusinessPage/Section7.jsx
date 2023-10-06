@@ -67,14 +67,21 @@ const Section7 = () => {
         try {
             setloading(true)
             await axios.post('https://kamao-api.vercel.app/sendmail/business', formData)
-            .then(res => console.log(res));
+                .then(res => console.log(res));
             toast.success('Thanks for sharing your details. We will contact you shortly.')
             setloading(false)
             setStep(1)
             setFormData({
-
+                fullname: '' || "Not Provided",
+                email: '' || "Not Provided",
+                phone: '' || "Not Provided",
+                job: '' || "Not Provided",
+                company: '' || "Not Provided",
+                category: '' || "Not Provided",
+                message: '' || "Not Provided",
+                EstimateBudget: [] || "Not Provided",
             })
-          
+
         } catch (error) {
             setloading(false)
             toast.error('Something went wrong!')
@@ -94,31 +101,31 @@ const Section7 = () => {
                         <div className='flex items-center relative'>
                             <img src={user} alt="img" className='absolute ' />
                             <input type="text" placeholder='Full Name' className='w-full focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10' name="fullname"
-                                
+
                                 onChange={handleChange} />
                         </div>
                         <div className="flex items-center relative">
                             <img src={phone} alt="phone" loading='lazy' className='absolute' />
                             <input type="text" placeholder='Phone Number' className='w-full focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10' name="phone"
-                                
+
                                 onChange={handleChange} />
                         </div>
                         <div className="flex items-center relative">
                             <img src={mail} alt="mail" className='absolute' loading='lazy' />
                             <input type="text" placeholder='Email' className=' focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="email"
-                                
+
                                 onChange={handleChange} />
                         </div>
                         <div className="flex items-center relative">
                             <img src={bag} alt="bag" loading='lazy' className='absolute' />
                             <input type="text" placeholder='Job Title' className=' focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="job"
-                                
+
                                 onChange={handleChange} />
                         </div>
                         <div className="flex items-center relative">
                             <img src={office} alt="office" loading='lazy' className='absolute' />
                             <input type="text" placeholder='Company' className=' focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="company"
-                                
+
                                 onChange={handleChange} />
                         </div>
                         <div className="relative items-center flex">
@@ -130,20 +137,20 @@ const Section7 = () => {
                             <div className="flex items-center relative">
                                 <img src={category} alt="category" loading='lazy' className='absolute' />
                                 <input type="text" placeholder='Category' className=' focus:outline-[#FA6F2C] border-solid border-[#6E6E6E] rounded-md py-2 ps-10 w-full' name="category"
-                                    
+
                                     onChange={handleChange} />
                             </div>
                             <p className='text-[#3D3E3E] font-bold text-lg'>Estimate Budget?</p>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" className="accent-[#FA6F2C] checked:text-white" name='5 lakh' id="1"  value="Less than 5 lakh" onChange={handleChange} /><label htmlFor="1" > Less than 5 lakh </label>
+                                <input type="checkbox" className="accent-[#FA6F2C] checked:text-white" name='5 lakh' id="1" value="Less than 5 lakh" onChange={handleChange} /><label htmlFor="1" > Less than 5 lakh </label>
                             </div>
                             <div className='gap-3 flex'>
-                                <input type="checkbox" value="Between 5 - 20 lakh" className="accent-[#FA6F2C] " id="2" name='5-20 lakh'onChange={handleChange}  /><label htmlFor="2"> Between 5 - 20 lakh </label>
+                                <input type="checkbox" value="Between 5 - 20 lakh" className="accent-[#FA6F2C] " id="2" name='5-20 lakh' onChange={handleChange} /><label htmlFor="2"> Between 5 - 20 lakh </label>
                             </div>
                             <div className='gap-3 flex'>
                                 <input type="checkbox" value="More than 20 Lakh" className="accent-[#FA6F2C] checked:bg-blue-500" id="3" name='20 lakh' onChange={handleChange} /><label htmlFor='3'> More than 20 Lakh </label>
                             </div>
-                            <textarea name="message" id="message" cols="30" rows="4"  onChange={handleChange} className='border-solid focus:outline-[#FA6F2C] border-[#6E6E6E] rounded-xl py-2 ps-5' placeholder='Describe your requirement in short.'></textarea>
+                            <textarea name="message" id="message" cols="30" rows="4" onChange={handleChange} className='border-solid focus:outline-[#FA6F2C] border-[#6E6E6E] rounded-xl py-2 ps-5' placeholder='Describe your requirement in short.'></textarea>
                             <div className='flex gap-6'>
                                 <div className="flex items-center w-full relative">
                                     <p className='absolute ps-5'><BsArrowLeft color='#FA6F2C' /></p>
