@@ -53,8 +53,8 @@ const Section7 = () => {
 
     const handleSubmitStep1 = (e) => {
         e.preventDefault();
-
-        if (!formData.email) {
+        let EmailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!formData.email.match(EmailRegex)) {
             alert("Enter Valid Email")
             return false
         }
