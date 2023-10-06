@@ -28,15 +28,15 @@ app.post('/sendmail', async (req, res) => {
     const { fullname, phone, email, city, briefIndustry, managingTeamExpierence, devoteProgram, teamSize, whoArYou
     } = req.body;
     const daraArray = [
-        `Fullname: ${fullname}`,
+        `Full Name: ${fullname}`,
         `<br/> Phone: ${phone}`,
         `<br/> Email: ${email}`,
         `<br/> City: ${city}`,
-        `<br/> Brief Past Industry: ${briefIndustry}`,
+        `<br/> Who Are You: ${whoArYou}`,
         `<br/> Managing Team Experience: ${managingTeamExpierence}`,
         `<br/> Devote Program per day: ${devoteProgram}`,
         `<br/> Team Size: ${teamSize}`,
-        `<br/> Who Are You: ${whoArYou}`,
+        `<br/> Brief Past Industry: ${briefIndustry}`,
     ]
     try {
         const transporter = await nodemailer.createTransport({
@@ -69,14 +69,14 @@ app.post('/sendmail/business', async (req, res) => {
     console.log(req.body);
     const { fullname, phone, email, company, category, message, job, EstimateBudget } = req.body;
     const daraArray = [
-        `Fullname: ${fullname}`,
+        `Full Name: ${fullname}`,
         `<br/> Phone: ${phone}`,
         `<br/> Email: ${email}`,
+        `<br/> Job: ${job}`,
         `<br/> Company: ${company}`,
         `<br/> Category: ${category}`,
-        `<br/> Message: ${message}`,
-        `<br/> Job: ${job}`,
         `<br/> Estimate Budget: ${EstimateBudget}`,
+        `<br/> Message: ${message}`,
     ]
 
     try {

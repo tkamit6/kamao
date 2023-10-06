@@ -15,15 +15,15 @@ export default function Section6() {
     const [loading, setloading] = useState(false)
 
     const [formData, setformData] = useState({
-        fullname: '',
-        phone: '',
-        email: '',
-        city: '',
-        briefIndustry: '',
-        managingTeamExpierence: '',
-        devoteProgram: '',
-        teamSize: '',
-        whoArYou:[],
+        fullname: '' || "Not Provided",
+        phone: '' || "Not Provided",
+        email: '' || "Not Provided",
+        city: '' || "Not Provided",
+        briefIndustry: '' || "Not Provided",
+        managingTeamExpierence: '' || "Not Provided",
+        devoteProgram: '' || "Not Provided",
+        teamSize: '' || "Not Provided",
+        whoArYou:[] || "Not Provided",
     })
 
     const { managingTeamExpierence, teamSize, devoteProgram, email } = formData;
@@ -66,11 +66,11 @@ export default function Section6() {
         try {
             setloading(true)
 
-            const res = await axios.post('https://kamao-api.vercel.app/sendmail', formData)
+            const res = await axios.post('/sendmail', formData)
                 .then(response => { console.log(response) });
 
             setloading(false)
-            toast.success('Data Sent Successfully!')
+            toast.success('Thanks for sharing your details. We will contact you shortly.')
             setformStep(1)
             setformData({
             })

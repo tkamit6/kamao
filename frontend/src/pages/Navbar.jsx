@@ -12,9 +12,16 @@ const Navbar = () => {
         { name: "Projects", link: "/" },
     ];
     let [open, setOpen] = useState(false);
+
+    const scrollTop = ()=>{
+        window.scrollTo({
+            top:0,
+            behavior:'smooth'
+        })
+    }
     
     return (
-        <nav className={`shadow-md w-full z-50 sticky left-0 ms-0 top-0 bg-white `}>
+        <nav onLoad={scrollTop} className={`shadow-md w-full z-50 sticky left-0 ms-0 top-0 bg-white `}>
             <div className='md:flex container mx-auto items-center justify-between max-w-7xl py-4 '>
                 <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-gray-800'>
@@ -33,7 +40,7 @@ const Navbar = () => {
                     {
                         Links.map((link) => (
                             <li key={link.name} className='md:ml-8 text-base md:my-0'>
-                                <NavLink to='/' className='text-[#7C7C7C] font-bold hover:text-[#E16428] duration-200'> {link.name}</NavLink>
+                                <NavLink to='/' className='text-[#7C7C7C] text-sm font-bold hover:text-[#E16428] duration-200'> {link.name}</NavLink>
                             </li>
                         ))
                     }
