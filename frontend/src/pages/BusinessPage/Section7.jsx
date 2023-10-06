@@ -70,6 +70,9 @@ const Section7 = () => {
             toast.success('Thanks for sharing your details. We will contact you shortly.')
             setloading(false)
             setStep(1)
+            setFormData({
+                
+            })
           
         } catch (error) {
             setloading(false)
