@@ -35,12 +35,12 @@ export default function Section6() {
           if (checked) {
             setformData({
               ...formData,
-              whoArYou: [...formData.whoArYou, value],
+              whoArYou: [...formData?.whoArYou, value],
             });
           } else {
             setformData({
               ...formData,
-              whoArYou: formData.whoArYou.filter((item) => item !== value),
+              whoArYou: formData?.whoArYou?.filter((item) => item !== value),
             });
           }
         } else {

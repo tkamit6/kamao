@@ -35,12 +35,12 @@ const Section7 = () => {
             if (checked) {
                 setFormData({
                     ...formData,
-                    EstimateBudget: [...formData.EstimateBudget, value],
+                    EstimateBudget: [...formData?.EstimateBudget, value],
                 });
             } else {
                 setFormData({
                     ...formData,
-                    EstimateBudget: formData.EstimateBudget.filter((item) => item !== value),
+                    EstimateBudget: formData?.EstimateBudget?.filter((item) => item !== value),
                 });
             }
         } else {
@@ -71,7 +71,7 @@ const Section7 = () => {
             setloading(false)
             setStep(1)
             setFormData({
-                
+
             })
           
         } catch (error) {
