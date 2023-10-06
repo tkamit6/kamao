@@ -58,7 +58,8 @@ export default function Section6() {
             return;
         }
         setformStep(2)
-    }
+    };
+
     const apiUrl = 'https://kamao-api.vercel.app';
     const finalformSubmit = async (e) => {
         e.preventDefault()
@@ -66,13 +67,12 @@ export default function Section6() {
         try {
             setloading(true)
             await axios.post('https://kamao-api.vercel.app/sendmail', formData)
-                .then(response => { console.log(response) });
+            .then(response => { console.log(response) });
 
             setloading(false)
             toast.success('Thanks for sharing your details. We will contact you shortly.')
             setformStep(1)
-            setformData({
-            })
+           
         } catch (error) {
             setloading(false)
             toast.error('Something went wrong!')
