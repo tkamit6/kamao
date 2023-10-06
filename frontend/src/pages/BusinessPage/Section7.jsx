@@ -66,7 +66,7 @@ const Section7 = () => {
         console.log(formData);
         try {
             setloading(true)
-            const res = await axios.post('https://kamao-api.vercel.app/sendmail/business', formData).then(res => console.log(res));
+            const resp = await axios.post('https://kamao-api.vercel.app/sendmail/business', formData).then(res => console.log(res));
             toast.success('Thanks for sharing your details. We will contact you shortly.')
             setloading(false)
             setStep(1)
