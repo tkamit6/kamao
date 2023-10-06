@@ -23,33 +23,33 @@ export default function Section6() {
         managingTeamExpierence: '' || "Not Provided",
         devoteProgram: '' || "Not Provided",
         teamSize: '' || "Not Provided",
-        whoArYou:[] || "Not Provided",
+        whoArYou: [] || "Not Provided",
     })
 
     const { managingTeamExpierence, teamSize, devoteProgram, email } = formData;
 
     const onChange = (e) => {
-        const {value, type, checked } = e.target;
-    
+        const { value, type, checked } = e.target;
+
         if (type === "checkbox") {
-          if (checked) {
-            setformData({
-              ...formData,
-              whoArYou: [...formData?.whoArYou, value],
-            });
-          } else {
-            setformData({
-              ...formData,
-              whoArYou: formData?.whoArYou?.filter((item) => item !== value),
-            });
-          }
+            if (checked) {
+                setformData({
+                    ...formData,
+                    whoArYou: [...formData.whoArYou, value],
+                });
+            } else {
+                setformData({
+                    ...formData,
+                    whoArYou: formData?.whoArYou?.filter((item) => item !== value),
+                });
+            }
         } else {
-          setformData({
-            ...formData,
-            [e.target.id]: e.target.value,
-          });
+            setformData({
+                ...formData,
+                [e.target.id]: e.target.value,
+            });
         }
-      };
+    };
 
     const SubmitformStep1 = (e) => {
         e.preventDefault();
@@ -65,8 +65,7 @@ export default function Section6() {
         console.log(formData);
         try {
             setloading(true)
-
-            const res = await axios.post('https://kamao-api.vercel.app/sendmail', formData)
+            await axios.post('https://kamao-api.vercel.app/sendmail', formData)
                 .then(response => { console.log(response) });
 
             setloading(false)
@@ -115,32 +114,32 @@ export default function Section6() {
                                     <div>
                                         <p className='font-bold md:text-2xl text-lg text-[#3D3E3E] md:mb-6 mb-2'>Who Are You?</p>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Experienced field agent' onChange={onChange}  />
+                                            <input type="checkbox" className="" name='who are you' value='Experienced field agent' onChange={onChange} />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Experienced field agent</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Entrepreneur' onChange={onChange}  />
+                                            <input type="checkbox" className="" name='who are you' value='Entrepreneur' onChange={onChange} />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Entrepreneur</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Community leader' onChange={onChange}  />
+                                            <input type="checkbox" className="" name='who are you' value='Community leader' onChange={onChange} />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Community leader (SHG, Mitra, Sahaj, etc.)</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='SMB business owner' onChange={onChange}  />
+                                            <input type="checkbox" className="" name='who are you' value='SMB business owner' onChange={onChange} />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">SMB business owner</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Agency owner/ manage'  onChange={onChange} />
+                                            <input type="checkbox" className="" name='who are you' value='Agency owner/ manage' onChange={onChange} />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C] font-medium md:text-lg text-base">Agency owner/ manage</span>
                                         </label>
                                         <label className="flex items-center checkbox-container mb-3 space-x-2">
-                                            <input type="checkbox" className="" name='who are you' value='Other' onChange={onChange}  />
+                                            <input type="checkbox" className="" name='who are you' value='Other' onChange={onChange} />
                                             <div className="checkmark"></div>
                                             <span className="text-[#7C7C7C]  font-medium md:text-lg text-base">Other</span>
                                         </label>
