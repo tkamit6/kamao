@@ -38,7 +38,7 @@ const Section5 = () => {
 
     return (
         <section className='mx-auto md:py-12 md:my-auto my-4 bg-gradient-to-r from-[#FFF8F8] to-[#FFF8EF] '>
-            <h2 className='text-[#3D3E3E] md:text-[2.6rem] mb-8 md:mb-3 text-[28px] font-bold font-head text-center'>We are <span className='text-[#E78353] font-head'> Actively </span>Hiring for</h2>
+            <h2 className='text-[#3D3E3E] md:text-[2.6rem] mb-6 md:mb-3 text-[28px] font-bold font-head text-center'>We are <span className='text-[#E78353] font-head'> Actively </span>Hiring for</h2>
             <div className=''>
                 <Swiper
                     slidesPerView={5}
@@ -83,7 +83,7 @@ const Section5 = () => {
 
                         {ActiveHiring.map((data, id) => (
                             <SwiperSlide key={id}>
-                                <div className='flex flex-row items-center gap-3 py-3 md:mb-5 md:mt-8 px-4 rounded-lg w-[100%] shadow-md bg-white' >
+                                <div className='flex flex-row items-center gap-3 py-3 my-1 md:mb-5 md:mt-8 px-4 rounded-lg w-[100%] shadow-sm bg-white' >
                                     <div>
                                         <img src={data.img} alt="img" style={{ height: '40px', width: '40px' }} />
                                     </div>
@@ -98,7 +98,7 @@ const Section5 = () => {
                     </Swiper>
                 </div>
 
-                <div className='mx-auto flex items-center justify-center relative mt-10'>
+                <div className='mx-auto flex items-center justify-center relative mt-8'>
                     <Link to='' className='text-[#FA6F2C] relative items-center px-5 md:w-[15%] w-[52%] rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Apply to jobs now <BsArrowRight className='absolute  top-3 right-5' /> </Link>
                 </div>
             </div>
