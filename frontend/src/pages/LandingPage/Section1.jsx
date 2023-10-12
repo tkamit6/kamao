@@ -22,9 +22,9 @@ const Section1 = () => {
                         />
                     </span></h2>
                     <p className='text-[#7C7C7C] md:mx-0 mx-auto md:text-base font-medium md:pt-6 md:pb-8 w-[86%] md:mb-0 mb-6'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.</p>
-                    <div className="flex flex-row items-center md:gap-8 gap-4 md:justify-start justify-between flex-wrap">
+                    <div className="flex flex-row items-center md:gap-8 gap-4 md:justify-start justify-center flex-wrap">
                         <Link to='/' className='md:w-auto w-[45%]'> <img src={AppStore} alt="logo" loading='lazy' /></Link>
-                        <Link to='/' className='md:w-auto w-[45%]'><img src={playStore} alt="logo" loading='lazy' /></Link>
+                        <Link to='/' className='md:w-auto md:block hidden w-[45%]'><img src={playStore} alt="logo" loading='lazy' /></Link>
                     </div>
 
                 </div>
