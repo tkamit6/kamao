@@ -101,7 +101,7 @@ const Section6 = () => {
 
             {/* mobile */}
             <Swiper
-                slidesPerView={1.5}
+                slidesPerView={1.1}
                 spaceBetween={0}
                 freeMode={true}
                 loop={true}
@@ -112,7 +112,7 @@ const Section6 = () => {
                 grid={{
                     rows: 2,
                 }}
-                modules={[Grid, Pagination, FreeMode]}
+                modules={[Grid, FreeMode]}
                 className="activityHiring md:hidden block me-6"
             >
                 {
