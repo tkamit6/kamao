@@ -135,7 +135,7 @@ const Section6 = () => {
             </Swiper>
 
             <div className='mx-auto flex items-center justify-center text-center relative mt-10 gap-4'>
-                <Link to='' className='text-[#FA6F2C]  px-6 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
+                <Link to='' className='text-[#FA6F2C] px-10 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
                 <button onClick={() => sliderRef.current?.slideNext()} className='p-3 border bg-white border-[#FA6F2C] rounded-full ' >
                     <BsArrowRight color='#FA6F2C' />
                 </button>
