@@ -62,10 +62,7 @@ const Section6 = () => {
                 // spaceBetween={0}
 
                 breakpoints={{
-                    640: {
-                        slidesPerView: 1.2,
-                        spaceBetween: 0,
-                    },
+
                     768: {
                         slidesPerView: 2,
                         spaceBetween: 0,
@@ -81,9 +78,8 @@ const Section6 = () => {
                 }}
                 freeMode={true}
                 modules={[Grid, Pagination, FreeMode]}
-                className="earningOppurtunity"
+                className="earningOppurtunity hidden md:block"
             >
-
                 {
                     EarningOpportunityData.map((link, id) => (
                         <SwiperSlide key={id}>
@@ -102,6 +98,39 @@ const Section6 = () => {
                     ))
                 }
             </Swiper>
+
+            {/* mobile */}
+            <Swiper
+                slidesPerView={1.2}
+                spaceBetween={0}
+                freeMode={true}
+                loop={true}
+                onSwiper={it => (sliderRef.current = it)}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[FreeMode]}
+                className="activityHiring md:hidden block me-6"
+            >
+                {
+                    EarningOpportunityData.map((link, id) => (
+                        <SwiperSlide key={id}>
+                            <div key={id} className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: `${link.bgColor}`, border: `4px solid ${link.borderColor}` }} >
+                                <div className='mb-3'>
+                                    <img src={link.img} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>{link.name}</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    {link.prara}
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>{link.opening}<span className='font-bold md:text-base text-xs text-[#33A3CF]'> {link.vancant}</span></p>
+                            </div>
+                        </SwiperSlide>
+                    ))
+                }
+            </Swiper>
+
             <div className='mx-auto flex items-center justify-center text-center relative mt-10 gap-4'>
                 <Link to='' className='text-[#FA6F2C]  px-6 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
                 <button onClick={() => sliderRef.current?.slideNext()} className='p-3 border bg-white border-[#FA6F2C] rounded-full ' >
