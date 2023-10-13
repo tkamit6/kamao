@@ -31,7 +31,7 @@ const Section1 = () => {
                 </div>
                 </div>
                 <div className='sm:col-span-1'>
-                    <img src={img146} alt="img" className='-ml-12 scale-150' />
+                    <img src={img146} alt="img" className='-ml-12 scale-150 md:block hidden' />
                 </div>
             </div>
         </section>

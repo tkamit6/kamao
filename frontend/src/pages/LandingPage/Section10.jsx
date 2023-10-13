@@ -21,7 +21,7 @@ const SliderData = [
 const Section10 = () => {
     var settings = {
         infinite: true,
-        speed: 500,
+        speed: 4000,
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,

@@ -130,7 +130,7 @@ const Section4 = () => {
                 </div>
             </div>
             {/* formparraalx */}
-            <main className='-mt-[37rem]'>
+            <main className='-mt-[37rem] md:block hidden'>
                 <ul id="cards">
                     <li className="cardParallax" id="card_1">
                         <div className="card__content  " >

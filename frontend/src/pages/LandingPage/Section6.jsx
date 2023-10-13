@@ -108,7 +108,12 @@ const Section6 = () => {
                 slidesPerView={1.1}
                 spaceBetween={0}
                 freeMode={true}
+                speed={8000}
                 loop={true}
+                autoplay={{
+                    delay: 1500,
+                    disableOnInteraction: false,
+                }}
                 // onSwiper={it => (sliderRef.current = it)}
                 pagination={{
                     clickable: true,
@@ -116,7 +121,7 @@ const Section6 = () => {
                 grid={{
                     rows: 2,
                 }}
-                modules={[Grid, FreeMode]}
+                modules={[Grid, FreeMode, Autoplay]}
                 className="activityHiring md:hidden block me-6"
             >
                 {
@@ -158,7 +163,7 @@ const HorizontalScrollCarousel = () => {
     const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
     return (
-        <section ref={targetRef} className="relative h-[300vh]">
+        <section ref={targetRef} className="relative h-[300vh]  md:block hidden ">
             <div className="sticky top-0 flex h-screen items-center overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-4">
                     {EarningOpportunityData.map((card, id) => {

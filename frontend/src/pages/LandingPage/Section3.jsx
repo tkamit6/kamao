@@ -39,8 +39,6 @@ const slider1Ref = useRef()
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
             // console.log(currentScrollPos);
-         
-
             if (currentScrollPos > preState) {
                 if (currentScrollPos >= 4200 && scrollY <= 5200) {
                     setToggleState(3)
@@ -98,7 +96,7 @@ const slider1Ref = useRef()
             </div>
 
             {/* formparraalx */}
-            <main className='-mt-[37rem]'>
+            <main className='-mt-[37rem] md:block hidden'>
                 <ul id="cards">
                     <li className="cardParallax" id="card_1">
                         <div className="card__content  " >
