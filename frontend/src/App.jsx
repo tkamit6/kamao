@@ -6,6 +6,7 @@ import LandingPage from './pages/LandingPage';
 import About from './pages/About'
 import TeamLeader from './pages/TeamLeader';
 import PageNotFound from './pages/PageNotFound';
+import Example from './pages/Example'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/business" element={<BusinessPage />} />
           <Route exact path="/about-us" element={<About />} />
           <Route exact path="/team-leader" element={<TeamLeader />} />
+          <Route exact path="/ex" element={<Example />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         {/* <Footer /> */}

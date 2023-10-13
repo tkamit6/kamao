@@ -7,18 +7,33 @@
 }
 .landSection2 .stick-para{
   position: sticky;
-	top: 1vh;
+	top: 23vh;
+	left: 9vw;
 	padding-top: calc(var(--index) * var(--card-top-offset));
 }
 .landSection7 .stick-para{
   position: sticky;
-	top: 5vh;
-	padding-top: calc(var(--index) * var(--card-top-offset));
-}
-.stick-parallax {
-	position: sticky;
 	top: 15vh;
 	padding-top: calc(var(--index) * var(--card-top-offset));
+}
+.stick-para {
+	position: sticky;
+	top: 2vh;
+}
+.BusinessSection4 .stick-para {
+	position: sticky;
+	top: 20vh;
+}
+.teamLeaderSection3 .cardParallax img{
+	transform: scale(.7);
+}
+.teamLeaderSection3 .stick-para {
+	position: sticky;
+	top: 18vh;
+}
+
+.BusinessSection4 .cardParallax img{
+	transform: scale(.7);
 }
 
 .ongoing-project.stick-parallax {
@@ -46,46 +61,4 @@
 
 	  }	
 }
-@supports (animation-timeline: works) {
 
-	@scroll-timeline cards-element-scrolls-in-body {
-		source: selector(body);
-		scroll-offsets:
-			/* Start when the start edge touches the top of the scrollport */
-			selector(#cards) start 1,
-			/* End when the start edge touches the start of the scrollport */
-			selector(#cards) start 0
-		;
-		start: selector(#cards) start 1; /* Start when the start edge touches the top of the scrollport */
-		end: selector(#cards) start 0; /* End when the start edge touches the start of the scrollport */
-		time-range: 4s;
-	}
-
-	.stick-parallax {
-		--index0: calc(var(--index) - 1); /* 0-based index */
-		--reverse-index: calc(var(--numcards) - var(--index0)); /* reverse index */
-		--reverse-index0: calc(var(--reverse-index) - 1); /* 0-based reverse index */
-	}
-	
-	.card__content {
-		transform-origin: 50% 0%;
-		will-change: transform;
-
-		--duration: calc(var(--reverse-index0) * 1s);
-		--delay: calc(var(--index0) * 1s);
-
-		animation: var(--duration) linear scale var(--delay) forwards;
-		animation-timeline: cards-element-scrolls-in-body;
-	}
-
-	@keyframes scale {
-		to {
-			transform:
-				scale(calc(
-					1.1
-					-
-					calc(0.1 * var(--reverse-index))
-				));
-		}
-	}
-}

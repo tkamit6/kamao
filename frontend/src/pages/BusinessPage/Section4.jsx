@@ -13,7 +13,6 @@ import downloadIcon from '../../images/download-Icon.svg'
 import bagIcon from '../../images/bagIcon.svg'
 import locationIcon from '../../images/locationIcon.svg'
 import growIcon from '../../images/growIcon.svg'
-import S from '../../pages/BusinessPage/S'
 import '../../custom.css'
 
 
@@ -35,16 +34,16 @@ const Section4 = () => {
             const currentScrollPos = window.scrollY;
             // console.log(currentScrollPos);
             if (currentScrollPos > preState) {
-                if (currentScrollPos >= 3000 && scrollY <= 3100) {
+                if (currentScrollPos >= 6401 && scrollY <= 8500) {
                     setToggleState(4)
-                } else if (currentScrollPos >= 2900 && scrollY <= 3100) {
+                } else if (currentScrollPos >= 5701 && scrollY <= 6400) {
                     setToggleState(3)
-                } else if (currentScrollPos >= 2700 && scrollY <= 3100) {
+                } else if (currentScrollPos >= 4601 && scrollY <= 5700) {
                     setToggleState(2)
                 }
-                else if (currentScrollPos >= 2500 && scrollY <= 3100) {
+                else if (currentScrollPos >= 3601 && scrollY <= 4600) {
                     setToggleState(1)
-                } else if (currentScrollPos >= 2300 && scrollY <= 3100) {
+                } else if (currentScrollPos >= 2300 && scrollY <= 3600) {
                     setToggleState(0)
                 }
             }
@@ -62,9 +61,9 @@ const Section4 = () => {
 
     return (
 
-        <section className='section4 container mx-auto md:py-16 md:ps-10 wrap max-w-7xl bg-white'>
-            <div className='stick-parallax'>
-                <h1 className='text-center relative font-bold md:text-5xl text-[1.75rem] font-head md:mb-16 mb-12 text-[#3D3E3E] z-40'>How it  <span className='text-[#E78353]'> Works? </span></h1>
+        <section className='BusinessSection4 container mx-auto md:py-16 md:ps-10 wrap max-w-7xl bg-white'>
+            <div className='stick-para'>
+                <h1 className='text-center relative font-bold md:text-5xl text-[1.75rem] font-head md:mb-36 mb-12 text-[#3D3E3E] z-40'>How it  <span className='text-[#E78353]'> Works? </span></h1>
                 <div className="grid md:grid-cols-4 pt-10 md:mx-5 md:-mt-44 items-center">
                     <div className="md:col-span-2 rounded-2xl hidden md:block">
                         <ul className="tabList">
@@ -81,9 +80,10 @@ const Section4 = () => {
 
                     <div className="md:col-span-2 rounded-2xl hidden md:block">
                         <div className="content ">
-                            <img src={data[toggleState].img} className='w-2/3 mx-auto relative' style={{ zIndex: 'auto' }} alt="img" loading='lazy' draggable="false" />
+                            {/* <img src={data[toggleState].img} className='w-2/3 mx-auto relative' style={{ zIndex: 'auto' }} alt="img" loading='lazy' draggable="false" /> */}
                         </div>
                     </div>
+
                     <div className='items-center md:hidden block'>
                         {/* for mobile */}
                         {
@@ -129,9 +129,68 @@ const Section4 = () => {
                     </div>
                 </div>
             </div>
-            <S />
+            {/* formparraalx */}
+            <main className='-mt-[37rem]'>
+                <ul id="cards">
+                    <li className="cardParallax" id="card_1">
+                        <div className="card__content  " >
+                            <div>
+
+                            </div>
+                            <figure >
+                                <img src={img} alt="img" className='!mb-24 z-30' />
+
+                            </figure>
+                        </div>
+                    </li>
+                    <li className="cardParallax" id="card_2">
+                        <div className="card__content ">
+                            <div>
+
+                            </div>
+                            <figure >
+                                <img src={img1} alt="img" className='!mb-24 z-30' />
+
+                            </figure>
+                        </div>
+                    </li>
+                    <li className="cardParallax" id="card_3">
+                        <div className="card__content ">
+                            <div>
+
+                            </div>
+                            <figure>
+                                <img src={img2} alt="img" className='!mb-24 z-30' />
+
+                            </figure>
+                        </div>
+                    </li>
+                    <li className="cardParallax" id="card_4">
+                        <div className="card__content ">
+                            <div>
+
+                            </div>
+                            <figure className=''>
+                                <img src={img3} alt="img" className=' -mb-12 z-30' />
+
+                            </figure>
+                        </div>
+                    </li>
+                    <li className="cardParallax" id="card_4">
+                        <div className="card__content ">
+                            <div>
+                            </div>
+                            <figure className=''>
+                                <img src={img4} alt="img" className=' -mb-12 z-30' />
+                            </figure>
+                        </div>
+                    </li>
+                </ul>
+            </main>
+            {/* formparraalx  end*/}
         </section>
     )
 }
+
 
 export default Section4

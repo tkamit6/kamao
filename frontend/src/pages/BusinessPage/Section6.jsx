@@ -13,12 +13,12 @@ const Section6 = () => {
       const currentScrollPos = window.scrollY;
       // console.log(currentScrollPos);
       if (currentScrollPos > preState) {
-        if (currentScrollPos >= 5800 && scrollY <= 6000) {
+        if (currentScrollPos >= 11001 && scrollY <= 12000) {
           setToggleState(2)
         }
-        else if (currentScrollPos >= 5500 && scrollY <= 6000) {
+        else if (currentScrollPos >= 9601 && scrollY <= 11000) {
           setToggleState(1)
-        } else if (currentScrollPos >= 5200 && scrollY <= 6000) {
+        } else if (currentScrollPos >= 8500 && scrollY <= 9600) {
           setToggleState(0)
         }
       }
@@ -100,24 +100,81 @@ const Section6 = () => {
           <input
             type="radio"
             name="myRadio" readOnly
-            className='accent-[#E78353] focus:border-[#E78353]'
+            className='accent-[#E78353] focus:border-[#E78353] cursor-pointer'
             checked={toggleState === 0}
+            onClick={() => setToggleState(0)}
           />
           <input
             type="radio"
             name="myRadio" readOnly
-            className='accent-[#E78353] focus:border-[#E78353]'
+            className='accent-[#E78353] focus:border-[#E78353] cursor-pointer'
             checked={toggleState === 1}
+            onClick={() => setToggleState(1)}
+
           />
           <input
             type="radio"
             name="myRadio" readOnly
-            className='accent-[#E78353] focus:border-[#E78353]'
+            className='accent-[#E78353] focus:border-[#E78353] cursor-pointer'
             checked={toggleState === 2}
+            onClick={() => setToggleState(2)}
           />
         </div>
       </div>
-      <S />
+      {/* formparraalx */}
+      <main className='-mt-[37rem]'>
+        <ul id="cards">
+          <li className="cardParallax" id="card_1">
+            <div className="card__content  " >
+              <div>
+
+              </div>
+              <figure >
+
+              </figure>
+            </div>
+          </li>
+          <li className="cardParallax" id="card_2">
+            <div className="card__content ">
+              <div>
+
+              </div>
+              <figure >
+
+              </figure>
+            </div>
+          </li>
+          <li className="cardParallax" id="card_3">
+            <div className="card__content ">
+              <div>
+
+              </div>
+              <figure>
+
+              </figure>
+            </div>
+          </li>
+          <li className="cardParallax" id="card_4">
+            <div className="card__content ">
+              <div>
+
+              </div>
+              <figure className=''>
+
+              </figure>
+            </div>
+          </li>
+          <li className="cardParallax" id="card_4">
+            <div className="card__content ">
+              <div>
+              </div>
+              <figure className=''>
+              </figure>
+            </div>
+          </li>
+        </ul>
+      </main>
+      {/* formparraalx  end*/}
     </section>
   )
 }

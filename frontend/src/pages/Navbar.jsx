@@ -4,13 +4,13 @@ import Logo from '../images/logo.svg'
 import { Link, NavLink } from 'react-router-dom';
 import menu from '../images/menu.svg'
 
+let Links = [
+    { name: "Service", link: "#service" },
+    { name: "How it works?", link: "#howitworks" },
+    { name: "Why Us?", link: "#whyus" },
+    { name: "Projects", link: "#projects" },
+];
 const Navbar = () => {
-    let Links = [
-        { name: "Service", link: "/" },
-        { name: "How it works?", link: "/" },
-        { name: "Why Us?", link: "/" },
-        { name: "Projects", link: "/" },
-    ];
     let [open, setOpen] = useState(false);
 
     const scrollTop = ()=>{
@@ -20,9 +20,16 @@ const Navbar = () => {
         })
     }
     
+    const handleNavigation = (link) => {
+        const element = document.querySelector(link);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
+
     return (
         <nav onLoad={scrollTop} className={`shadow-md w-full z-50 sticky left-0 ms-0 top-0 bg-white `}>
-            <div className='md:flex container mx-auto items-center justify-between max-w-7xl py-4 '>
+            <div className='md:flex container mx-auto items-center justify-between max-w-7xl py-2 '>
                 <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-gray-800'>
                     <span className='text-3xl text-indigo-600 mr-1 pt-2'>
@@ -38,9 +45,9 @@ const Navbar = () => {
 
                 <ul className={`md:flex md:items-center md:pb-0 pb-12 nav-menu absolute md:static bg-white md:z-auto left-0 w-full md:w-auto md:pl-0 md:pt-0 pt-3 px-6 transition-all duration-500 ease-in md:transition-none md:gap-8 gap-3 h-screen md:h-auto z-10 ${open ? 'top-22 ' : 'left-[-790px]'}`}>
                     {
-                        Links.map((link) => (
+                        Links.map((link, index) => (
                             <li key={link.name} className='md:ml-8 text-base md:my-0'>
-                                <NavLink to='/' className='text-[#7C7C7C] text-sm font-bold hover:text-[#E16428] duration-200'> {link.name}</NavLink>
+                                <NavLink to={index} onClick={() => handleNavigation(link.link)} className='text-[#7C7C7C] text-sm font-bold hover:text-[#E16428] duration-200'> {link.name}</NavLink>
                             </li>
                         ))
                     }

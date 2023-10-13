@@ -21,8 +21,10 @@ export default function Section5() {
         infinite: true,
         centerPadding: "220px",
         slidesToShow: 1,
-        speed: 500,
+        speed: 4000,
         dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000
     };
     const Mobilesettings = {
         className: "center",
@@ -35,10 +37,10 @@ export default function Section5() {
     };
 
     const onGoingProjectdata = [
-        { img: img, mobileImg: mobilePerson, heading: "Google - App Onboarding", about: "Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies  Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies ", social:google },
-        { img: img, mobileImg: mobilePerson, heading: "Google - App Onboarding", about: "Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies  Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies " , social:google},
-        { img: img, mobileImg: mobilePerson, heading: "Google - App Onboarding", about: "Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies  Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies ", social:google },
-        { img: img, mobileImg: mobilePerson, heading: "Google - App Onboarding", about: "Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies  Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies ", social:google },
+        { img: img, mobileImg: mobilePerson, heading: "Google - App Onboarding", about: "Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies  Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies ", social: google },
+        { img: img, mobileImg: mobilePerson, heading: "Google - App Onboarding", about: "Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies  Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies ", social: google },
+        { img: img, mobileImg: mobilePerson, heading: "Google - App Onboarding", about: "Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies  Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies ", social: google },
+        { img: img, mobileImg: mobilePerson, heading: "Google - App Onboarding", about: "Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies  Velit luctus pulvinar augue morbi ultricies Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies Velit luctus pulvinar augue morbi ultricies ", social: google },
     ]
 
     return (
@@ -46,43 +48,43 @@ export default function Section5() {
             <h1 className='text-center relative font-bold md:text-[2.62rem] text-[1.75rem] font-head md:mb-16 mb-12 text-[#3D3E3E]'>Our Ongoing <span className='text-[#E78353]'>Projects</span></h1>
             <div className=' md:block hidden'>
                 <Slider {...settings}>
-                {
-                    onGoingProjectdata.map((data, id)=>(
-                    <div key={id} className=''>
-                        <div className='flex bg-[#FFF5EF] md:w-[800px] gap-x-6 md:p-6 rounded-xl mx-10'>
-                            <div>
-                                <img src={data.img} alt="img" />
+                    {
+                        onGoingProjectdata.map((data, id) => (
+                            <div key={id} className=''>
+                                <div className='flex bg-[#FFF5EF] md:w-[800px] gap-x-6 md:p-6 rounded-xl mx-10'>
+                                    <div>
+                                        <img src={data.img} alt="img" />
+                                    </div>
+                                    <div className='flex flex-col justify-between'>
+                                        <h2 className='text-[#E78353] font-bold text-[2rem] md:mb-1'>{data.heading}</h2>
+                                        <p className='text-[#7C7C7C] text-base font-medium leading-[23px]'>{data.about} </p>
+                                        <img src={data.social} alt="svg" className='md:w-[100px]' />
+                                    </div>
+                                </div>
                             </div>
-                            <div className='flex flex-col justify-between'>
-                                <h2 className='text-[#E78353] font-bold text-[2rem] md:mb-1'>{data.heading}</h2>
-                                <p className='text-[#7C7C7C] text-base font-medium leading-[23px]'>{data.about} </p>
-                                <img src={data.social} alt="svg" className='md:w-[100px]' />
-                            </div>
-                        </div>
-                    </div>
-                    ))
-                }
+                        ))
+                    }
                 </Slider>
             </div>
 
             <div className='md:hidden block'>
                 <Slider {...Mobilesettings}>
-                {
-                    onGoingProjectdata.map((data, id)=>(
-                    <div key={id} className=''>
-                        <div className=' bg-[#FFF5EF] w-full gap-x-6 p-4 rounded-xl mx-auto'>
-                            <div>
-                                <img src={data.mobileImg} alt="img" />
+                    {
+                        onGoingProjectdata.map((data, id) => (
+                            <div key={id} className=''>
+                                <div className=' bg-[#FFF5EF] w-full gap-x-6 p-4 rounded-xl mx-auto'>
+                                    <div>
+                                        <img src={data.mobileImg} alt="img" />
+                                    </div>
+                                    <div className='flex flex-col justify-between'>
+                                        <h2 className='text-[#E78353] font-bold text-[20px] mb-2 mt-4'>{data.heading}</h2>
+                                        <p className='text-[#7C7C7C] text-base font-medium mb-3 leading-[23px]'>{data.about} </p>
+                                        <img src={data.social} alt="svg" className='w-[100px]' />
+                                    </div>
+                                </div>
                             </div>
-                            <div className='flex flex-col justify-between'>
-                                <h2 className='text-[#E78353] font-bold text-[20px] mb-2 mt-4'>{data.heading}</h2>
-                                <p className='text-[#7C7C7C] text-base font-medium mb-3 leading-[23px]'>{data.about} </p>
-                                <img src={data.social} alt="svg" className='w-[100px]' />
-                            </div>
-                        </div>
-                    </div>
-                    ))
-                }
+                        ))
+                    }
                 </Slider>
             </div>
 

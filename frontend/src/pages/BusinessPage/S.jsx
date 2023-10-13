@@ -25,17 +25,17 @@ const ParallaxSection = () => {
 
   return (
     <main className='md:block hidden'>
-    <ul id="cads md:block hidden">
-      <li className="car h-[70vh] md:block hidden" >
-       
-      </li>
-      <li className="car h-[70vh] md:block hidden" >
-        <div className="card__conten md:block hidden">
-          
-        </div>
-      </li>
-    </ul>
-  </main>
+      <ul id="cads md:block hidden">
+        <li className="car h-[70vh] md:block hidden" >
+
+        </li>
+        <li className="car h-[70vh] md:block hidden" >
+          <div className="card__conten md:block hidden">
+
+          </div>
+        </li>
+      </ul>
+    </main>
   );
 };
 

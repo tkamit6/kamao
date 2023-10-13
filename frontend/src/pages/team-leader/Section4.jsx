@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 import "swiper/css/autoplay";
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 
 export default function Section4() {
@@ -39,13 +39,14 @@ export default function Section4() {
                     pagination={{
                         dynamicBullets: true,
                     }}
+                    speed={4000}
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: false,
                     }}
                     loop={true}
 
-                    modules={[Pagination]}
+                    modules={[Pagination, Autoplay]}
                     className="teamLeaserSwiper md:mx-44"
                 >
                     {

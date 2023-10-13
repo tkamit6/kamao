@@ -32,13 +32,13 @@ const Section7 = () => {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
-            // console.log(currentScrollPos + " sec7");
+            console.log(currentScrollPos + " sec7");
             if (currentScrollPos > preState) {
-                if (currentScrollPos >= 5600 && scrollY <= 5700) {
+                if (currentScrollPos >= 10500 && scrollY <= 11000) {
                     setToggleState(2)
-                } else if (currentScrollPos >= 5460 && scrollY <= 5700) {
+                } else if (currentScrollPos >= 9800 && scrollY <= 10500) {
                     setToggleState(1)
-                } else if (currentScrollPos >= 5100 && scrollY <= 5700) {
+                } else if (currentScrollPos >= 9000 && scrollY <= 9800) {
                     setToggleState(0)
                 }
             }
@@ -50,17 +50,17 @@ const Section7 = () => {
     }, [toggleState, isTabActive, preState])
 
     const handleClick = (index) => {
-        console.log(index);
+        // console.log(index);
         setToggleState(index)
         setIsTabActive(true);
     }
 
     return (
-        <section className='landSection7 container mx-auto md:py-4 max-w-7xl wrap rounded-2xl'>
+        <section className='landSection7 bg-[#FFF5EF] container mx-auto md:py-4 max-w-7xl wrap rounded-2xl'>
             <div className='stick-para'>
-                <div className="grid md:grid-cols-2 landSection7-bg md:px-[102px] md:py-0 py-6 items-center ">
+                <div className="grid md:grid-cols-2 landSection7-bg md:px-[102px] md:py-16 py-6 items-center ">
                     <div className="md:col-span-1 md:my-auto -my-10 ">
-                        <img src={ExtraIncome[toggleState]?.img} alt="img" loading='lazy' className='md:block hidden md:h-[41rem]' />
+                        {/* <img src={ExtraIncome[toggleState]?.img} alt="img" loading='lazy' className='md:block hidden md:h-[41rem]' /> */}
                     </div>
                     <div className="md:col-span-1 md:text-start text-center md:w-[94%] mx-auto w-[90%]">
                         <h2 className='font-head w-[97%] mx-auto mb-3 text-[#E78353] font-bold md:text-[2.6rem] text-[1.7rem]'>Earn more with Kamaao Jobs</h2>
@@ -74,6 +74,8 @@ const Section7 = () => {
                                     </div>
                                 ))
                             }
+
+                            {/* mobile */}
                             <div className='md:hidden block  mb-4'>
 
                                 {/* <Swiper
@@ -94,9 +96,9 @@ const Section7 = () => {
                                     <SwiperSlide>l</SwiperSlide>
                                     <SwiperSlide>l</SwiperSlide>
                                 </Swiper> */}
-                                 <img src={imgage1} alt="img" className='mb-3' />
+                                <img src={imgage1} alt="img" className='mb-3' />
                                 <h3 className='text-[#3D3E3E] font-bold text-xl w-[90%] mx-auto leading-6 text-center mb-2'>Earn an extra incentive via Kamaao jobs</h3>
-                                <p className='text-[#7C7C7C] mb-6 font-medium text-sm text-center'>At Kamaao we offer you a wide range of jobs opportunity with a pay scale that is higher then the industry standards.</p> 
+                                <p className='text-[#7C7C7C] mb-6 font-medium text-sm text-center'>At Kamaao we offer you a wide range of jobs opportunity with a pay scale that is higher then the industry standards.</p>
                             </div>
                             <div className='md:mt-8'>
                                 <Link to='' className='bg-white rounded-full font-bold text-base border border-[#E78353] text-[#FA6F2C] px-5 py-2.5'>Explore Now</Link>
@@ -105,7 +107,43 @@ const Section7 = () => {
                     </div>
                 </div>
             </div>
-            <S />
+            {/* <S /> */}
+
+            {/* formparraalx */}
+            <main className='-mt-[37rem]'>
+                <ul id="cards ">
+                    <li className="cardParallax" id="card_1">
+                        <div className="card__content  " >
+                            <figure >
+                                <img src={slider1} alt="img" className='!mb-24' />
+                            </figure>
+                            <div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li className="cardParallax" id="card_2">
+                        <div className="card__content ">
+                            <figure >
+                                <img src={slider2} alt="img" className='!mb-24' />
+                            </figure>
+                            <div>
+
+                            </div>
+                        </div>
+                    </li>
+                    <li className="cardParallax" id="card_3">
+                        <div className="card__content ">
+                            <figure>
+                                <img src={slider3} alt="img" className='' />
+                            </figure>
+                            <div></div>
+                        </div>
+                    </li>
+
+                </ul>
+            </main>
+            {/* formparraalx  end*/}
         </section>
     )
 }

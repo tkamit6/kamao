@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import slider1 from '../../images/landingPage/slider1.png'
 import slider2 from '../../images/landingPage/slider2.png'
 import slider3 from '../../images/landingPage/slider3.png'
@@ -8,8 +8,6 @@ import M2 from '../../images/landingPage/M2.png'
 import M3 from '../../images/landingPage/M3.png'
 import M4 from '../../images/landingPage/M4.png'
 import { Link } from 'react-router-dom'
-import S from '../../pages/BusinessPage/S'
-import '../../custom.css'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -20,6 +18,7 @@ import "swiper/css/autoplay";
 
 // import required modules
 import { Pagination } from 'swiper/modules';
+import Parrallax from '../Parrallax'
 
 const Section3 = () => {
     // const ExtraIncome = useContext(MyContext)
@@ -32,21 +31,25 @@ const Section3 = () => {
     ]
     const [toggleState, setToggleState] = useState(0);
     const [isTabActive, setIsTabActive] = useState(false);
-    const [preState, setPreState] = useState(0)
+    const [preState, setPreState] = useState(0);
+    const [scale, setScale] = useState(1);
 
+const slider1Ref = useRef()
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
             // console.log(currentScrollPos);
+         
+
             if (currentScrollPos > preState) {
-                if (currentScrollPos >= 1800 && scrollY <= 2000) {
+                if (currentScrollPos >= 4200 && scrollY <= 5200) {
                     setToggleState(3)
                     // console.log("active 2")
-                } else if (currentScrollPos >= 1600 && scrollY <= 2000) {
+                } else if (currentScrollPos >= 3200 && scrollY <= 4200) {
                     setToggleState(2)
                     // console.log("active 2")
                 }
-                else if (currentScrollPos >= 1400 && scrollY <= 2000) {
+                else if (currentScrollPos >= 2200 && scrollY <= 3200) {
                     setToggleState(1)
                     // console.log("active 1")
                 } else if (currentScrollPos >= 1150 && scrollY <= 2000) {
@@ -67,7 +70,7 @@ const Section3 = () => {
     }
 
     return (
-        <section className='landSection2 container mx-auto md:py-0 max-w-7xl wrap bg-[#FFF5EF] rounded-2xl'>
+        <section className='landSection2 container mx-auto md:py-32 max-w-7xl wrap bg-[#FFF5EF] rounded-2xl'>
             <div className='stick-para'>
                 <div className="grid md:grid-cols-2 md:px-[102px] items-center ">
                     <div className="md:col-span-1 md:text-start text-center mx-auto md:w-[101%]">
@@ -87,12 +90,63 @@ const Section3 = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="md:col-span-1 md:my-auto -my-10 ">
-                        <img src={ExtraIncome[toggleState].img} alt="img" loading='lazy' className='md:block hidden md:h-[46rem] h-auto md:mx-auto' />
+                    <div className="md:col-span-1 md:my-auto  ">
+                        {/* <img src={slider1} alt="img" className='z-10' /> */}
+                        {/* <img src={ExtraIncome[toggleState].img} alt="img" loading='lazy' className='md:block hidden md:h-[46rem] h-auto md:mx-auto' /> */}
                     </div>
                 </div>
             </div>
-            <S />
+
+            {/* formparraalx */}
+            <main className='-mt-[37rem]'>
+                <ul id="cards">
+                    <li className="cardParallax" id="card_1">
+                        <div className="card__content  " >
+                            <div>
+
+                            </div>
+                            <figure >
+                                <img src={slider2} alt="img" className='!mb-24' />
+
+                            </figure>
+                        </div>
+                    </li>
+                    <li className="cardParallax" id="card_2">
+                        <div className="card__content ">
+                            <div>
+
+                            </div>
+                            <figure >
+                                <img src={slider3} alt="img" className='!mb-24'/>
+
+                            </figure>
+                        </div>
+                    </li>
+                    <li className="cardParallax" id="card_3">
+                        <div className="card__content ">
+                            <div>
+
+                            </div>
+                            <figure>
+                                <img src={slider4} alt="img" className='!mb-24'/>
+
+                            </figure>
+                        </div>
+                    </li>
+                    <li className="cardParallax" id="card_4">
+                        <div className="card__content ">
+                            <div>
+
+                            </div>
+                            <figure className=''>
+                                <img src={slider1} alt="img" className=' -mb-12' />
+
+                            </figure>
+                        </div>
+                    </li>
+                </ul>
+            </main>
+            {/* formparraalx  end*/}
             <Swiper
                 pagination={{
                     dynamicBullets: true,

@@ -1,12 +1,13 @@
 import React from 'react'
-import imgMan from '../../images/main-group.webp'
-import { Link } from 'react-router-dom'
+import imgMan from '../../images/main-group.webp';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const Section1 = () => {
     return (
-        <section className='business container mx-auto bg-[#FFF5EF] mt-2 pb-8 rounded-lg max-w-7xl wrap'>
-        <span className='business1'></span>
-        <span className='businessBottomRight'></span>
+        <section className='business container mx-auto md:py-16 bg-[#FFF5EF] mt-2 pb-8 rounded-lg max-w-7xl wrap'>
+            <span className='business1'></span>
+            <span className='businessBottomRight'></span>
             <div className="md:mx-28 mx-8">
                 <div className="grid grid-col-3 md:grid-cols-12 items-center justify-between">
                     <div className="text-center md:text-start col-span-3 md:col-span-6 order-2 md:order-none">
@@ -15,7 +16,13 @@ const Section1 = () => {
                         <Link to="/" className='rounded-3xl font-bold bg-white px-4 py-2 border-[#E78353] border-2 text-[#E78353]'>Get Started</Link>
                     </div>
                     <div className="col-span-3 md:col-span-6  order-1 md:order-none">
-                        <img src={imgMan} alt="img" loading='lazy' className='md:me-4 mx-auto mb-6' draggable='false' />
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 1 }}
+                        >
+                            <img src={imgMan} alt="img" loading='lazy' className='md:me-4 mx-auto mb-6' draggable='false' />
+                        </motion.div>
                     </div>
                 </div>
             </div>

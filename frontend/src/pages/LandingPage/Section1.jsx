@@ -3,6 +3,7 @@ import AppStore from '../../images/AppStore.svg'
 import Typewriter from 'typewriter-effect';
 import playStore from '../../images/playStore.svg'
 import { Link } from 'react-router-dom';
+import img146 from '../../images/landingPage/img146.webp'
 
 const Section1 = () => {
 
@@ -29,7 +30,9 @@ const Section1 = () => {
 
                 </div>
                 </div>
-                <div className='sm:col-span-1'></div>
+                <div className='sm:col-span-1'>
+                    <img src={img146} alt="img" className='-ml-12 scale-150' />
+                </div>
             </div>
         </section>
     )
