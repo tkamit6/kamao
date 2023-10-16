@@ -28,7 +28,7 @@ const Navbar = () => {
 
     return (
         <nav onLoad={scrollTop} className={`landingNav shadow-md w-full z-50 sticky left-0 ms-0 top-0 bg-white `}>
-            <div className='md:flex container mx-auto items-center justify-between max-w-7xl md:py-2 py-4 '>
+            <div className='md:flex container mx-auto items-center justify-between max-w-7xl md:py-0 py-4 '>
                 <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-gray-800'>
                     <span className='text-3xl text-indigo-600 mr-1 pt-2'>
