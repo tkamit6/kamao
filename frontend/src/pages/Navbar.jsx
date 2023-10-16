@@ -20,10 +20,6 @@ const Navbar = () => {
             behavior: 'smooth'
         })
     }
-    const handleSetActive = () => {
-
-    }
-
 
 
     return (
@@ -50,7 +46,7 @@ const Navbar = () => {
                                     smooth={true}
                                     offset={-80}
                                     duration={1000}
-                                    isDynamic={true} onSetActive={handleSetActive} className='text-[#7C7C7C] text-base font-bold hover:text-[#E16428] transition duration-200 cursor-pointer'> {link.name}</Link>
+                                    isDynamic={true}  className='text-[#7C7C7C] text-base font-bold hover:text-[#E16428] transition duration-200 cursor-pointer'> {link.name}</Link>
                             </li>
                         ))
                     }

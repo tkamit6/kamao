@@ -61,17 +61,17 @@ const Section4 = () => {
 
     return (
 
-        <section className='BusinessSection4 container mx-auto md:py-16 md:ps-10 wrap max-w-7xl bg-white'>
+        <section id='howitworks' className='BusinessSection4 container mx-auto md:py-16 md:ps-10 wrap max-w-7xl bg-white'>
             <div className='stick-para'>
                 <h1 className='text-center relative font-bold md:text-5xl text-[1.75rem] font-head md:mb-36 mb-12 text-[#3D3E3E] z-40'>How it  <span className='text-[#E78353]'> Works? </span></h1>
-                <div id='howitworks' className="grid md:grid-cols-4 pt-10 md:mx-5 md:-mt-44 items-center">
+                <div  className="grid md:grid-cols-4 pt-10 md:mx-5 md:-mt-44 items-center">
                     <div className="md:col-span-2 rounded-2xl hidden md:block">
                         <ul className="tabList">
                             {
                                 data.map((list, id) => (
                                     <div key={id}>
                                         {toggleState === id && <p className='py-2 text-[#7C7C7C] font-bold text-2xl'> Step <span>{id + 1}</span> </p>}
-                                        <p onClick={() => hangeHandle(id)} className={`${toggleState === id ? "text-[#E16428] font-bold text-[42px]" : "text-[#3D3E3E] font-normal text-[28px] my-12"} cursor-pointer `}>{list.name}</p>
+                                        <p onClick={() => hangeHandle(id)} className={`${toggleState === id ? "text-[#E16428] font-bold text-[42px] transition duration-700 ease-in-out" : "text-[#3D3E3E] font-normal text-[28px] my-12"} cursor-pointer`}>{list.name}</p>
                                     </div>
                                 ))
                             }
@@ -132,13 +132,13 @@ const Section4 = () => {
             {/* formparraalx */}
             <main className='-mt-[37rem] md:block hidden max-w-7xl'>
                 <ul id="cards">
-                    <li className="cardParallax" id="card_1">
-                        <div className="card__content  " >
+                    <li className="cardParallax " id="card_1">
+                        <div className="card__content" >
                             <div>
 
                             </div>
                             <figure >
-                                <img src={img} alt="img" className='!mb-24 z-30' />
+                                <img src={img} alt="img" className='!mb-24 -z-50' />
 
                             </figure>
                         </div>
@@ -149,7 +149,7 @@ const Section4 = () => {
 
                             </div>
                             <figure >
-                                <img src={img1} alt="img" className='!mb-24 z-30' />
+                                <img src={img1} alt="img" className='!mb-24 ' />
 
                             </figure>
                         </div>
@@ -160,7 +160,7 @@ const Section4 = () => {
 
                             </div>
                             <figure>
-                                <img src={img2} alt="img" className='!mb-24 z-30' />
+                                <img src={img2} alt="img" className='!mb-24' />
 
                             </figure>
                         </div>
