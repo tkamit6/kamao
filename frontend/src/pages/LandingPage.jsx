@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Section1 from './LandingPage/Section1'
 import Section2 from './LandingPage/Section2'
 import Section3 from './LandingPage/Section3'
@@ -13,24 +13,38 @@ import Section11 from './LandingPage/Section11'
 import Section12 from './LandingPage/Section12'
 import NavbarLanding from './LandingPage/NavbarLanding';
 import { Footer } from '../pages/Footer'
+import loadingPage from '../images/loadingPage.svg'
 
 const LandingPage = () => {
+  const [loading, setloading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setloading(false)
+    }, 1500);
+  })
+
   return (
     <>
-      <NavbarLanding />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
-      <Section7 />
-      <Section8 />
-      <Section9 />
-      <Section10 />
-      <Section11 />
-      <Section12 />
-      <Footer />
+      {
+        loading ? (<img src={loadingPage} alt='loading' className='absolute top-[30%] left-0 right-0 mx-auto' />) :
+          <>
+            <NavbarLanding />
+            <Section1 />
+            <Section2 />
+            <Section3 />
+            <Section4 />
+            <Section5 />
+            <Section6 />
+            <Section7 />
+            <Section8 />
+            <Section9 />
+            <Section10 />
+            <Section11 />
+            <Section12 />
+            <Footer />
+          </>
+      }
     </>
   )
 }

@@ -4,7 +4,6 @@ import slider2 from '../../images/landingPage/2.webp'
 import slider3 from '../../images/landingPage/3.webp'
 import { Link } from 'react-router-dom'
 import imgage1 from '../../images/landingPage/1.webp'
-import S from '../../pages/BusinessPage/S'
 
 import { SwiperSlide, Swiper } from 'swiper/react'
 
@@ -32,13 +31,13 @@ const Section7 = () => {
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.scrollY;
-            console.log(currentScrollPos + " sec7");
+            // console.log(currentScrollPos + " sec7");
             if (currentScrollPos > preState) {
-                if (currentScrollPos >= 10500 && scrollY <= 11000) {
+                if (currentScrollPos >= 9200 && scrollY <= 13000) {
                     setToggleState(2)
-                } else if (currentScrollPos >= 9800 && scrollY <= 10500) {
+                } else if (currentScrollPos >= 8201 && scrollY <= 9200) {
                     setToggleState(1)
-                } else if (currentScrollPos >= 9000 && scrollY <= 9800) {
+                } else if (currentScrollPos >= 8000 && scrollY <= 8200) {
                     setToggleState(0)
                 }
             }
@@ -110,7 +109,7 @@ const Section7 = () => {
             {/* <S /> */}
 
             {/* formparraalx */}
-            <main className='-mt-[37rem] md:block hidden' >
+            <main className='-mt-[37rem] md:block hidden max-w-7xl' >
                 <ul id="cards ">
                     <li className="cardParallax" id="card_1">
                         <div className="card__content  " >

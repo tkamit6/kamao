@@ -5,34 +5,43 @@
 	--numcards: 4;
 	--outline-width: 0px;
 }
-.landSection2 .stick-para{
-  position: sticky;
-	top: 23vh;
+
+.landSection2 .stick-para {
+	position: sticky;
+	top: 17vh;
 	left: 9vw;
-	padding-top: calc(var(--index) * var(--card-top-offset));
 }
-.landSection7 .stick-para{
-  position: sticky;
-	top: 15vh;
-	padding-top: calc(var(--index) * var(--card-top-offset));
+
+.landSection7 .stick-para {
+	position: sticky;
+	top: 10vh;
 }
+
 .stick-para {
 	position: sticky;
 	top: 2vh;
 }
+
 .BusinessSection4 .stick-para {
 	position: sticky;
-	top: 20vh;
+	top: 15vh;
 }
-.teamLeaderSection3 .cardParallax img{
+
+.BusinessSection6 .stick-para {
+	position: sticky;
+	top: -8vh;
+}
+
+.teamLeaderSection3 .cardParallax img {
 	transform: scale(.7);
 }
+
 .teamLeaderSection3 .stick-para {
 	position: sticky;
 	top: 18vh;
 }
 
-.BusinessSection4 .cardParallax img{
+.BusinessSection4 .cardParallax img {
 	transform: scale(.7);
 }
 
@@ -42,23 +51,24 @@
 	padding-top: calc(var(--index) * var(--card-top-offset));
 }
 
-@media only screen and (max-width: 600px){
-	.landSection2 .stick-para{
+@media only screen and (max-width: 600px) {
+	.landSection2 .stick-para {
 		/* display: none; */
-  position: static;
+		position: static;
 
-	  }
-	  .landSection7 .stick-para{
+	}
+
+	.landSection7 .stick-para {
 		/* display: none; */
-  position: static;
+		position: static;
 
 
-	  }
-	  .stick-parallax {
+	}
+
+	.stick-parallax {
 		/* display: none; */
-  position: static;
+		position: static;
 
 
-	  }	
+	}
 }
-

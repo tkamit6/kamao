@@ -96,7 +96,7 @@ const slider1Ref = useRef()
             </div>
 
             {/* formparraalx */}
-            <main className='-mt-[37rem] md:block hidden'>
+            <main className='-mt-[37rem] md:block hidden max-w-7xl'>
                 <ul id="cards">
                     <li className="cardParallax" id="card_1">
                         <div className="card__content  " >

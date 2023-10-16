@@ -7,7 +7,6 @@ import MimgGirl from '../../images/MsliderBannerGirl.webp'
 import Mimg1 from '../../images/MsliderBanner1.webp'
 import Mimg2 from '../../images/MsliderBanner2.webp'
 import Mimg3 from '../../images/MsliderBannerEarning.webp'
-import S from '../../pages/BusinessPage/S'
 import '../../custom.css'
 
 

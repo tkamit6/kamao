@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import img from '../../images/amazon.png'
-import S from '../../pages/BusinessPage/S'
 import '../../custom.css'
 
 const Section6 = () => {
@@ -41,8 +40,8 @@ const Section6 = () => {
   ]
 
   return (
-    <section className=' container mx-auto md:py-10 pt-0 max-w-7xl wrap '>
-      <div className='ongoing-project stick-parallax'>
+    <section id='projects' className='BusinessSection6 container mx-auto md:py-10 pt-0 max-w-7xl wrap '>
+      <div className='ongoing-project stick-para'>
         <h1 className='text-center font-bold md:text-5xl text-[1.75rem] font-head md:mb-16 mb-12 text-[#3D3E3E]'>Our Ongoing <span className='text-[#E78353]'>Projects </span></h1>
 
         <div className='bg-[#FFF5EF] md:px-[102px] rounded-3xl md:py-16 p-4'>
@@ -141,34 +140,6 @@ const Section6 = () => {
               </div>
               <figure >
 
-              </figure>
-            </div>
-          </li>
-          <li className="cardParallax" id="card_3">
-            <div className="card__content ">
-              <div>
-
-              </div>
-              <figure>
-
-              </figure>
-            </div>
-          </li>
-          <li className="cardParallax" id="card_4">
-            <div className="card__content ">
-              <div>
-
-              </div>
-              <figure className=''>
-
-              </figure>
-            </div>
-          </li>
-          <li className="cardParallax" id="card_4">
-            <div className="card__content ">
-              <div>
-              </div>
-              <figure className=''>
               </figure>
             </div>
           </li>

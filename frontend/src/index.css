@@ -107,6 +107,9 @@ footer {
   bottom: 50px;
   right: 45px;
 }
+.landingNav ul a.active{
+  color: #E16428;
+}
 
 .cards p {
   color: #000;
@@ -197,6 +200,12 @@ input[type='radio'] {
 }
 .business img{
   animation: animate 5s linear 2s infinite alternate;
+}
+.landSection1 .phoneImg{
+  animation: animate 5s linear 2s infinite alternate;
+  width: 76%;
+  max-width: 100%;
+
 }
 
 @keyframes animate {
@@ -630,6 +639,7 @@ textarea {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  
 
   .comment-div .img-box {
     left: 6%;

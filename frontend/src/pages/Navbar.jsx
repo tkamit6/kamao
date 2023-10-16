@@ -1,42 +1,41 @@
 import React, { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai'
 import Logo from '../images/logo.svg'
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-scroll';
+import { NavLink } from 'react-router-dom'
 import menu from '../images/menu.svg'
 
 let Links = [
-    { name: "Service", link: "#service" },
-    { name: "How it works?", link: "#howitworks" },
-    { name: "Why Us?", link: "#whyus" },
-    { name: "Projects", link: "#projects" },
+    { name: "Service", link: "service" },
+    { name: "How it works?", link: "howitworks" },
+    { name: "Why Us?", link: "whyus" },
+    { name: "Projects", link: "projects" },
 ];
 const Navbar = () => {
     let [open, setOpen] = useState(false);
 
-    const scrollTop = ()=>{
+    const scrollTop = () => {
         window.scrollTo({
-            top:0,
-            behavior:'smooth'
+            top: 0,
+            behavior: 'smooth'
         })
     }
-    
-    const handleNavigation = (link) => {
-        const element = document.querySelector(link);
-        if (element) {
-            element.scrollIntoView({ behavior: "smooth" });
-        }
-    };
+    const handleSetActive = () => {
+
+    }
+
+
 
     return (
-        <nav onLoad={scrollTop} className={`shadow-md w-full z-50 sticky left-0 ms-0 top-0 bg-white `}>
+        <nav onLoad={scrollTop} className={`landingNav shadow-md w-full z-50 sticky left-0 ms-0 top-0 bg-white `}>
             <div className='md:flex container mx-auto items-center justify-between max-w-7xl md:py-2 py-4 '>
                 <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-gray-800'>
                     <span className='text-3xl text-indigo-600 mr-1 pt-2'>
                     </span>
-                    <Link to='/'>
+                    <NavLink to='/'>
                         <img src={Logo} alt="images" loading='lazy' className='busy-logo-img' />
-                    </Link>
+                    </NavLink>
                 </div>
 
                 <div onClick={() => setOpen(!open)} className='text-3xl absolute right-6 top-5 cursor-pointer md:hidden'>
@@ -47,7 +46,11 @@ const Navbar = () => {
                     {
                         Links.map((link, index) => (
                             <li key={link.name} className='md:ml-8 text-base md:my-0'>
-                                <NavLink to={index} onClick={() => handleNavigation(link.link)} className='text-[#7C7C7C] text-sm font-bold hover:text-[#E16428] duration-200'> {link.name}</NavLink>
+                                <Link to={link.link} spy={true}
+                                    smooth={true}
+                                    offset={-80}
+                                    duration={1000}
+                                    isDynamic={true} onSetActive={handleSetActive} className='text-[#7C7C7C] text-base font-bold hover:text-[#E16428] transition duration-200 cursor-pointer'> {link.name}</Link>
                             </li>
                         ))
                     }

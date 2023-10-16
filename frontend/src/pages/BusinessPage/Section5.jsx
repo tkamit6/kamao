@@ -8,7 +8,7 @@ import growIcon from '../../images/growIcon.svg'
 
 const Section5 = () => {
     return (
-        <section className='container mx-auto md:py-10 max-w-7xl wrap '>
+        <section id='whyus' className='container mx-auto md:py-10 max-w-7xl wrap '>
             <h1 className='text-center font-bold md:text-5xl text-[1.75rem] font-head mb-16 text-[#3D3E3E]'>Why  <span className='text-[#E78353] font-head'> Choose Us </span>?</h1>
             <img src={img} alt="img" loading='lazy' draggable='false' className='mx-auto md:block hidden' />
             <img src={MImg} alt="img" loading='lazy' draggable='false' className='mx-auto md:hidden block' />

@@ -59,7 +59,7 @@ const Section6 = () => {
             <h2 className='text-[#3D3E3E] md:text-[2.6rem] text-[1.75rem] mx-auto md:w-[100%] w-[87%] font-bold font-head text-center mb-6 md:mb-10'>Other<span className='text-[#E78353] font-head'> Gigs Based Earnings </span>Opportunity</h2>
 
             <Swiper
-                speed={4000}
+                speed={8000}
                 breakpoints={{
                     768: {
                         slidesPerView: 2,
@@ -78,7 +78,7 @@ const Section6 = () => {
                 grid={{
                     rows: 2,
                 }}
-                loop={true}
+                // loop={true}
                 freeMode={true}
                 modules={[Grid, Pagination, Autoplay, FreeMode]}
                 className="earningOppurtunity hidden md:block"
@@ -101,7 +101,7 @@ const Section6 = () => {
                     ))
                 }
             </Swiper>
-            <HorizontalScrollCarousel />
+            {/* <HorizontalScrollCarousel /> */}
 
             {/* mobile */}
             <Swiper
