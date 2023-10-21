@@ -17,7 +17,7 @@ import 'swiper/css/pagination';
 import "swiper/css/autoplay";
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import Parrallax from '../Parrallax'
 
 const Section3 = () => {
