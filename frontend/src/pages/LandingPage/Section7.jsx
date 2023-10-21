@@ -75,7 +75,7 @@ const Section7 = () => {
                     }}
                     loop={true}
 
-                    modules={[Pagination]}
+                    modules={[Pagination, Autoplay]}
                     className="landSection2Swiper md:hidden block"
                 >
                     {ExtraIncome.map((data, id) => (
