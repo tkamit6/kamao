@@ -54,6 +54,8 @@ const EarningOpportunityData = [
 ]
 const Section6 = () => {
     const sliderRef = useRef();
+    const MobilesliderRef = useRef();
+   
     return (
         <section className='container mx-auto md:py-12 max-w-7xl'>
             <h2 className='text-[#3D3E3E] md:text-[2.6rem] text-[1.75rem] mx-auto md:w-[100%] w-[87%] font-bold font-head text-center mb-6 md:mb-10'>Other<span className='text-[#E78353] font-head'> Gigs Based Earnings </span>Opportunity</h2>
@@ -114,7 +116,7 @@ const Section6 = () => {
                     delay: 1500,
                     disableOnInteraction: false,
                 }}
-                // onSwiper={it => (sliderRef.current = it)}
+                onSwiper={it => (MobilesliderRef.current = it)}
                 pagination={{
                     clickable: true,
                 }}
@@ -144,8 +146,11 @@ const Section6 = () => {
             </Swiper>
 
             <div className='mx-auto flex items-center justify-center text-center relative mt-10 gap-4'>
-                <Link to='' className='text-[#FA6F2C] px-10 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
-                <button onClick={() => sliderRef.current?.slideNext()} className='p-3 border bg-white border-[#FA6F2C] rounded-full ' >
+                <Link to='#' className='text-[#FA6F2C] px-10 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
+                <button onClick={()=>sliderRef.current?.slideNext()} className='md:block hidden p-3 border bg-white border-[#FA6F2C] rounded-full ' >
+                    <BsArrowRight color='#FA6F2C' />
+                </button>
+                <button onClick={()=>MobilesliderRef.current?.slideNext()} className='md:hidden block p-3 border bg-white border-[#FA6F2C] rounded-full ' >
                     <BsArrowRight color='#FA6F2C' />
                 </button>
             </div>
