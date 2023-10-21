@@ -78,9 +78,7 @@ const Section5 = () => {
                             delay: 1500,
                             disableOnInteraction: false,
                         }}
-                        // grid={{
-                        //     rows: 1,
-                        // }}
+                      
                         pagination={{
                             clickable: true,
                         }}
