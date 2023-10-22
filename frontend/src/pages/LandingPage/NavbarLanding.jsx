@@ -46,17 +46,17 @@ const Navbar = () => {
             top:0,
             behavior:'smooth'
         })
-
     }
 
     const pathMatchRoute = (route) => {
         if (route === location.pathname) {
             return true;
         }
-        window.scrollTo({
-            top:0,
-            behavior:'smooth'
-        })
+        
+        // window.scrollTo({
+        //     top:0,
+        //     behavior:'smooth'
+        // })
     }
 
 
