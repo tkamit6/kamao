@@ -7,8 +7,18 @@ import About from './pages/About'
 import TeamLeader from './pages/TeamLeader';
 import PageNotFound from './pages/PageNotFound';
 import Example from './pages/Example'
+import { useEffect } from 'react';
 
 function App() {
+
+  useEffect( () => {
+    (
+      async () => {
+          const LocomotiveScroll = (await import('locomotive-scroll')).default
+          const locomotiveScroll = new LocomotiveScroll();
+      }
+    )()
+  }, [])
   return (
     <>
       <BrowserRouter>

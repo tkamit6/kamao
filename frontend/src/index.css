@@ -686,6 +686,9 @@ textarea {
   nav .logo-img {
     width: 130px;
   }
+  .landSection2Swiper {
+    padding-bottom: 3rem;
+  }
 
 }
 
@@ -696,3 +699,10 @@ textarea {
 .activityHiring>.swiper-wrapper {
   flex-direction: row;
 }
+
+ .landSection2Swiper .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+  width: 80%!important;
+}
+.landSection2Swiper .swiper-pagination-bullet-active {
+  width: 50px!important;
+} 

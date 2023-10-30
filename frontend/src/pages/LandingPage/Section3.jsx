@@ -149,6 +149,7 @@ const slider1Ref = useRef()
                 pagination={{
                     dynamicBullets: true,
                 }}
+                speed={3000}
                 autoplay={{
                     delay: 2500,
                     disableOnInteraction: false,

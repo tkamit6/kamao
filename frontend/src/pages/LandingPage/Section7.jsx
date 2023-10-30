@@ -69,6 +69,7 @@ const Section7 = () => {
                     pagination={{
                         dynamicBullets: true,
                     }}
+                    speed={2000}
                     autoplay={{
                         delay: 2500,
                         disableOnInteraction: false,

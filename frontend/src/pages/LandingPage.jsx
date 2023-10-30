@@ -22,6 +22,7 @@ const LandingPage = () => {
     setTimeout(() => {
       setloading(false)
     }, 1500);
+    
   })
 
   return (
