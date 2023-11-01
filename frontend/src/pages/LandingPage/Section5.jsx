@@ -45,12 +45,12 @@ const Section5 = () => {
                     spaceBetween={30}
                     freeMode={true}
                     speed={4000}
+                    loop={true}
                     autoplay={{
                         delay: 1500,
                         disableOnInteraction: false,
                     }}
 
-                    loop={true}
                     modules={[FreeMode, Autoplay]}
                     className="activityHiring md:block hidden"
                 >
@@ -104,7 +104,7 @@ const Section5 = () => {
                 </div>
 
                 <div className='mx-auto flex items-center justify-center relative mt-8'>
-                    <Link to='' className='text-[#FA6F2C] relative items-center px-5 w-fit pr-12 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Apply to jobs now <BsArrowRight className='absolute  top-3 right-5' /> </Link>
+                    <Link to='' className='text-[#FA6F2C] relative items-center px-5 w-fit pr-12 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Apply to jobs now <BsArrowRight className='absolute top-3 right-5' /> </Link>
                 </div>
             </div>
         </section>

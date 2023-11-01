@@ -34,9 +34,9 @@ const Section4 = () => {
             const currentScrollPos = window.scrollY;
             // console.log(currentScrollPos);
             if (currentScrollPos > preState) {
-                if (currentScrollPos >= 6301 && scrollY <= 8500) {
+                if (currentScrollPos > 6310 && scrollY <= 8500) {
                     setToggleState(4)
-                } else if (currentScrollPos >= 5301 && scrollY <= 6300) {
+                } else if (currentScrollPos >= 5301 && scrollY <= 6299) {
                     setToggleState(3)
                 } else if (currentScrollPos >= 4301 && scrollY <= 5300) {
                     setToggleState(2)
@@ -63,7 +63,7 @@ const Section4 = () => {
 
         <section id='howitworks' className='BusinessSection4 container mx-auto md:py-16 md:ps-10 wrap max-w-7xl bg-white'>
             <div className='stick-para'>
-                <h1 className='text-center relative font-bold md:text-5xl text-[1.75rem] font-head md:mb-36 mb-12 text-[#3D3E3E] z-40'>How it  <span className='text-[#E78353]'> Works? </span></h1>
+                <h1 className='text-start relative font-bold md:text-5xl text-[1.75rem] font-head md:mb-40 mb-12 text-[#3D3E3E] z-40'>How it  <span className='text-[#E78353]'> Works? </span></h1>
                 <div  className="grid md:grid-cols-4 pt-10 md:mx-5 md:-mt-44 items-center">
                     <div className="md:col-span-2 rounded-2xl hidden md:block">
                         <ul className="tabList">
@@ -129,8 +129,9 @@ const Section4 = () => {
                     </div>
                 </div>
             </div>
+            
             {/* formparraalx */}
-            <main className='-mt-[37rem] md:block hidden max-w-7xl'>
+            <main className='-mt-[37rem] md:block hidden !-z-10 max-w-7xl'>
                 <ul id="cards">
                     <li className="cardParallax " id="card_1">
                         <div className="card__content" >
