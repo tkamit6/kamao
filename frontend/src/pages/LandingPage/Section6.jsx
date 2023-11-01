@@ -81,7 +81,7 @@ const Section6 = () => {
         <section className='container mx-auto md:py-12 max-w-7xl'>
             <h2 className='text-[#3D3E3E] md:text-[2.6rem] text-[1.75rem] mx-auto md:w-[100%] w-[87%] font-bold font-head text-center mb-6 md:mb-10'>Other<span className='text-[#E78353] font-head'> Gigs Based Earnings </span>Opportunity</h2>
 
-            <div className='stick-para'>
+            {/* <div className='stick-para'>
 </div>
             <div className='flex overflow-hidden horizontial-div-other-gig'>
                 {
@@ -102,9 +102,9 @@ const Section6 = () => {
                         </div>
                     ))
                 }
-            </div>
+            </div> */}
 
-            {/* <Swiper
+            <Swiper
                 speed={8000}
                 breakpoints={{
                     768: {
@@ -146,7 +146,7 @@ const Section6 = () => {
                         </SwiperSlide>
                     ))
                 }
-            </Swiper> */}
+            </Swiper>
             {/* <HorizontalScrollCarousel /> */}
 
             {/* mobile */}
