@@ -12,6 +12,13 @@ import { Helmet } from 'react-helmet';
 
 function App() {
 
+  useEffect(() => {
+    const metaThemeColor = document.querySelector("meta[name=theme-color]");
+    if (metaThemeColor) {
+      metaThemeColor.setAttribute("content", "#9d4edd");
+    }
+  }, []);
+  
   useEffect( () => {
     (
       async () => {
