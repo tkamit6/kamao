@@ -151,14 +151,14 @@ const Section6 = () => {
                 }
             </Swiper>
 
-            <div className='mx-auto flex items-center justify-center text-center relative -mt-10 gap-4'>
+            <div className='mx-auto flex items-center justify-center text-center relative mt-10 gap-4'>
                 <Link to='#' className='text-[#FA6F2C] px-10 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
-                {/* <button onClick={() => sliderRef.current?.slideNext()} className='md:block hidden p-3 border bg-white border-[#FA6F2C] rounded-full ' >
+                <button className='md:block hidden p-3 border bg-white border-[#FA6F2C] rounded-full ' >
                     <BsArrowRight color='#FA6F2C' />
-                </button> */}
-                {/* <button onClick={() => MobilesliderRef.current?.slideNext()} className='md:hidden block p-3 border bg-white border-[#FA6F2C] rounded-full ' >
+                </button>
+                <button onClick={() => MobilesliderRef.current?.slideNext()} className='md:hidden block p-3 border bg-white border-[#FA6F2C] rounded-full ' >
                     <BsArrowRight color='#FA6F2C' />
-                </button> */}
+                </button>
             </div>
 
         </section>
@@ -174,7 +174,7 @@ const HorizontalScrollCarousel = () => {
     const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
     return (
-        <section ref={targetRef} className="relative h-[200vh]">
+        <section ref={targetRef} className="relative h-[200vh] md:block hidden">
             <div className="sticky top-10 flex h-screen items-center overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-4">
                     <div className='flex overflow-hidden pb-8 horizontial-div-other-gig'>

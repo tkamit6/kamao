@@ -54,7 +54,7 @@ const Section3 = () => {
 
         <section className='container teamLeaderSection3 mx-auto md:py-16 md:ps-10 wrap md:mb-20 max-w-7xl bg-white'>
             <div className='stick-para'>
-                <h1 className='text-center relative font-bold md:text-[2.62rem] text-[1.75rem] font-head md:mb-36 mb-12 text-[#3D3E3E]'>How to Become a <span className='text-[#E78353] font-head'>Team Leader </span></h1>
+                <h1 className='text-center relative font-bold md:text-[2.62rem] text-[1.75rem] font-head md:mb-[13rem] mb-12 text-[#3D3E3E]'>How to Become a <span className='text-[#E78353] font-head'>Team Leader </span></h1>
                 <div className="grid md:grid-cols-4 pt-10 md:mx-5 md:-mt-44 items-center">
                     <div className="md:col-span-2 rounded-2xl hidden md:block">
                         <ul className="tabList">
