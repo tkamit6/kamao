@@ -8,6 +8,7 @@ import TeamLeader from './pages/TeamLeader';
 import PageNotFound from './pages/PageNotFound';
 import Example from './pages/Example'
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 
 function App() {
 
@@ -21,6 +22,9 @@ function App() {
   }, [])
   return (
     <>
+     <Helmet>
+        <meta name="theme-color" content="#9d4edd" />
+      </Helmet>
       <BrowserRouter>
         {/* <Navbar/> */}
         <Routes>
