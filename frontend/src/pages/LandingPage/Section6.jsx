@@ -151,7 +151,7 @@ const Section6 = () => {
                 }
             </Swiper>
 
-            <div className='mx-auto flex items-center justify-center text-center relative mt-10 gap-4'>
+            <div className='mx-auto flex items-center justify-center text-center relative -mt-10 gap-4'>
                 <Link to='#' className='text-[#FA6F2C] px-10 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
                 {/* <button onClick={() => sliderRef.current?.slideNext()} className='md:block hidden p-3 border bg-white border-[#FA6F2C] rounded-full ' >
                     <BsArrowRight color='#FA6F2C' />
@@ -177,177 +177,176 @@ const HorizontalScrollCarousel = () => {
         <section ref={targetRef} className="relative h-[200vh]">
             <div className="sticky top-10 flex h-screen items-center overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-4">
-                <div className='flex overflow-hidden pb-8 horizontial-div-other-gig'>
-                    <div>
-                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                    <div className='flex overflow-hidden pb-8 horizontial-div-other-gig'>
+                        <div>
+                            <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                                <div className='mb-3'>
+                                    <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
                             </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#FFEFEF", border: "4px solid #FFBDBD" }} >
+                                <div className='mb-3'>
+                                    <img src={homeLoan} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Home Loan</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
                             </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
                         </div>
-                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                        <div>
+                            <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#E5FFFA", border: "4px solid #ACE5DA" }} >
+                                <div className='mb-3'>
+                                    <img src={id} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>KYC Approval</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
                             </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#FFFBE5", border: "4px solid #F9E88C" }} >
+                                <div className='mb-3'>
+                                    <img src={saving} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Savings Account</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
                             </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                        <div>
+                            <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#FFE4F5", border: "4px solid #F2BDDF" }} >
+                                <div className='mb-3'>
+                                    <img src={creditCard} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Credit Card Seller</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
+                            <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#FFECE3", border: "4px solid #FBD3BF" }} >
+                                <div className='mb-3'>
+                                    <img src={saving} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#D4F3FF", border: "4px solid #BBE0EE" }} >
+                                <div className='mb-3'>
+                                    <img src={dopening} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Demat Account Opening</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
+                            <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#E5FFFA", border: "4px solid #ACE5DA" }} >
+                                <div className='mb-3'>
+                                    <img src={surveyfrom} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Surveys & Audits</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                                <div className='mb-3'>
+                                    <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
+                            <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#FFEFEF", border: "4px solid #FFBDBD" }} >
+                                <div className='mb-3'>
+                                    <img src={homeLoan} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Home Loan</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#E5FFFA", border: "4px solid #ACE5DA" }} >
+                                <div className='mb-3'>
+                                    <img src={id} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>KYC Approval</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
+                            <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#FFFBE5", border: "4px solid #F9E88C" }} >
+                                <div className='mb-3'>
+                                    <img src={saving} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Savings Account</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#FFE4F5", border: "4px solid #F2BDDF" }} >
+                                <div className='mb-3'>
+                                    <img src={creditCard} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Credit Card Seller</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
+                            <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#FFECE3", border: "4px solid #FBD3BF" }} >
+                                <div className='mb-3'>
+                                    <img src={saving} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                                </div>
+                                <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                                <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                    <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                                </div>
+                                <hr />
+                                <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                    </div>
-                    <div>
-                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
-                            <div className='mb-3'>
-                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
-                            </div>
-                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
-                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
-                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
-                            </div>
-                            <hr />
-                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
-                        </div>
-                    </div>
-
-                </div>
                 </motion.div>
             </div>
         </section>
