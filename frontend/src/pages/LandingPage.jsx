@@ -21,7 +21,7 @@ const LandingPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setloading(false)
-    }, 1500);
+    }, 800);
     
   })
 

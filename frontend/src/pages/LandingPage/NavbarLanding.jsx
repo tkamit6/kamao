@@ -11,6 +11,7 @@ import telegramIcon from '../../images/landingPage/nav-icon/telegram.svg'
 import instaIcon from '../../images/landingPage/nav-icon/instagram.svg'
 import YtIcon from '../../images/landingPage/nav-icon/youtube.svg'
 import whatsAppIcon from '../../images/landingPage/nav-icon/whatsapp.svg';
+import {motion} from 'framer-motion';
 
 
 const Navbar = () => {
@@ -62,7 +63,7 @@ const Navbar = () => {
 
     return (
         <nav className={`shadow-md w-full z-50 sticky top-0 left-0 ms-0 bg-white ${show}`}>
-            <div className='md:flex container mx-auto items-center justify-between max-w-7xl md:py-0 py-4 '>
+            <motion.div initial={{opacity:0, y:-100}} animate={{opacity:1, y:0}} transition={{delay:0.25}} className='md:flex container mx-auto items-center justify-between max-w-7xl md:py-0 py-4 '>
                 <div className='font-bold text-2xl cursor-pointer flex items-center font-[Poppins] 
       text-gray-800'>
                     <span className='text-3xl text-indigo-600 mr-1 pt-2'></span>
@@ -148,7 +149,7 @@ const Navbar = () => {
                 <button className='text-white bg-orange-600 rounded-full px-8 py-2 hidden md:block'>
                     Contact Us
                 </button>
-            </div>
+            </motion.div>
         </nav>
     )
 }

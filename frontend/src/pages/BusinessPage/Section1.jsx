@@ -9,9 +9,9 @@ const Section1 = () => {
     return (
         <section id='service' className='business container mx-auto md:py-16 bg-[#FFF5EF] mt-2 md:mt-4 pb-8 rounded-lg max-w-7xl wrap'>
             <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 3 }}
+                initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2 }}
             >
                 <span className='business1'></span>
                 <span className='businessBottomRight'></span>

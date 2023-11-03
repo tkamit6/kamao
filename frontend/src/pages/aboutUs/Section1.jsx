@@ -5,9 +5,9 @@ import { motion } from 'framer-motion'
 export default function Section1() {
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 3 }}
+            initial={{ opacity: 0, y: -100 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 2 }}
         >
             <section className='container mx-auto bg-[#FFF5EF] md:mb-8 md:mt-2 py-0 max-w-7xl wrap '>
                 <div className='text-center md:pt-16 mt-6 relative'>
