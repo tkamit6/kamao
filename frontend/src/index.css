@@ -689,5 +689,8 @@ textarea {
   .landSection2Swiper {
     padding-bottom: 3rem;
   }
+  .swiper-grid-column > .swiper-wrapper{
+    flex-direction: row !important;
+  }
 
 }

@@ -151,9 +151,9 @@ const Section6 = () => {
                 }
             </Swiper>
 
-            <div className='mx-auto flex items-center justify-center text-center relative mt-10 gap-4'>
-                <Link to='#' className='text-[#FA6F2C] px-10 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
-                <button className='md:block hidden p-3 border bg-white border-[#FA6F2C] rounded-full ' >
+            <div className='mx-auto flex items-center justify-center text-center relative mt-6 gap-4'>
+                <Link to='#' className='text-[#FA6F2C] -mt-20 px-10 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
+                <button className='md:block hidden p-3 -mt-20  border bg-white border-[#FA6F2C] rounded-full ' >
                     <BsArrowRight color='#FA6F2C' />
                 </button>
                 <button onClick={() => MobilesliderRef.current?.slideNext()} className='md:hidden block p-3 border bg-white border-[#FA6F2C] rounded-full ' >
@@ -171,7 +171,7 @@ const HorizontalScrollCarousel = () => {
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-55%"]);
 
     return (
         <section ref={targetRef} className="relative h-[200vh] md:block hidden">

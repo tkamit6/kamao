@@ -23,14 +23,14 @@ import { Footer } from '../pages/Footer'
 import loadingPage from '../images/loadingPage.svg'
 
 const tabList = [
-  { name: "Delivery Partner Sourcing", link: "/", img: vector, content: "11" },
-  { name: "Driver Partner Onboarding", link: "/", img: vector1, content: "21" },
-  { name: "Merchant Onboarding", link: "/", img: vector2, content: "31" },
-  { name: "Financial Services", link: "/", img: vector3, content: "41" },
-  { name: "Banking Services", link: "/", img: vector4, content: "51" },
-  { name: "Field Marketing & Promotions", link: "/", img: vector5, content: "61" },
-  { name: "Offroll On - Demand Workforce", link: "/", img: vector6, content: "71" },
-  { name: "Other Manpower Sourcing", link: "/", img: vector7, content: "81" }
+  { name: "Delivery Partner Sourcing", link: "#", img: vector, content: "11" },
+  { name: "Driver Partner Onboarding", link: "#", img: vector1, content: "21" },
+  { name: "Merchant Onboarding", link: "#", img: vector2, content: "31" },
+  { name: "Financial Services", link: "#", img: vector3, content: "41" },
+  { name: "Banking Services", link: "#", img: vector4, content: "51" },
+  { name: "Field Marketing & Promotions", link: "#", img: vector5, content: "61" },
+  { name: "Offroll On - Demand Workforce", link: "#", img: vector6, content: "71" },
+  { name: "Other Manpower Sourcing", link: "#", img: vector7, content: "81" }
 ];
 export const BusinessPage = () => {
   const [loading, setloading] = useState(true);
