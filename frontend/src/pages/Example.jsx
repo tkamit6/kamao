@@ -1,85 +1,249 @@
-import React from 'react';
-import slider1 from '../images/landingPage/slider1.png';
-import slider2 from '../images/landingPage/slider2.png'
-import slider3 from '../images/landingPage/slider3.png'
-import slider4 from '../images/landingPage/slider4.png'
-import M1 from '../images/landingPage/M1.png'
-import M2 from '../images/landingPage/M2.png'
-import M3 from '../images/landingPage/M3.png'
-import M4 from '../images/landingPage/M4.png'
+import { motion, useTransform, useScroll } from "framer-motion";
+import { useRef } from "react";
+import hand from '../images/landingPage/hand.svg';
+import id from '../images/landingPage/id.svg';
+import creditCard from '../images/landingPage/creditCard.svg';
+import dopening from '../images/landingPage/d-ac-opening.svg';
+import homeLoan from '../images/landingPage/homeLoan.svg';
+import saving from '../images/landingPage/saving.svg';
+import qr from '../images/landingPage/qr.svg';
+import surveyfrom from '../images/landingPage/survey.svg';
 
-
-import { Splide, SplideTrack, SplideSlide } from '@splidejs/react-splide';
-// import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
-import '@splidejs/splide/dist/css/themes/splide-default.min.css';
-// Default theme
-import '@splidejs/react-splide/css';
-
-// or other themes
-// import '@splidejs/react-splide/css/skyblue';
-import '@splidejs/react-splide/css/sea-green';
-
-// or only core styles
-import '@splidejs/react-splide/css/core';
-import { Link } from 'react-router-dom';
-
-new Splide('.splide', {
-    autoScroll: {
-        speed: 2,
-    },
-});
-
-const ExtraIncome = [
-    { heading: "Apply for Jobs and Earn", para: "At Kamaao we offer you a wide range of jobs opportunity with a pay scale that is higher then the industry standards.", img: slider1, mImg: M1 },
-    { heading: "Earn Milestone based Incentive", para: "At Kamaao we offer you a wide range of jobs opportunity with a pay scale that is higher then the industry standards.", img: slider2, mImg: M2 },
-    { heading: "Complete small Gigs & Task", para: "At Kamaao we offer you a wide range of jobs opportunity with a pay scale that is higher then the industry standards.", img: slider3, mImg: M3 },
-    { heading: "Refer & Earn", para: "At Kamaao we offer you a wide range of jobs opportunity with a pay scale that is higher then the industry standards.", img: slider4, mImg: M4 }
-]
-
-const Navbar = () => {
-
-    const options = {
-        type         : 'loop',
-        gap          : '1rem',
-        autoplay     : true,
-        pauseOnHover : false,
-        resetProgress: false,
-        // height       : '15rem',
-    };
-
+const Example = () => {
     return (
-        <Splide
-            options={ options }
-            aria-labelledby="autoplay-example-heading"
-            hasTrack={ false }
-        >
-            <div style={ { position: 'relative' } }>
-                <SplideTrack>
-                    {ExtraIncome.map((data, id) => (
-                    <SplideSlide key={id}>
-                        <img src={data?.mImg} alt="img" loading='lazy' className='-mb-10 relative' />
-                        <div className="absolute top-[40%] left-5 -z-10 w-[60%] h-[30%] bg-[#FFEDE3] rounded-full"></div>
-                        <div className="absolute top-[20%] right-5 -z-10 w-[60%] h-[30%] bg-[#FFEDE3] rounded-full"></div>
-                        <h3 key={id} className="text-[#3D3E3E] text-2xl font-bold w-[96%]  text-center mx-auto mb-2" >{data.heading}</h3>
-                        <p className="font-medium text-[#7C7C7C] text-base w-[96%] mb-6 text-center mx-auto">{data.para}</p>
-                        <div className='mx-auto text-center'>
-                            <Link to='' className='bg-white rounded-full font-bold text-base border border-[#E78353] text-[#FA6F2C] px-5 py-2.5'>Start Earning Now</Link>
-                        </div>
-                    </SplideSlide>
-                    ) ) }
-                </SplideTrack>
+        <div className="bg-neutral-800">
+            <div className="flex h-48 items-center justify-center">
+                <span className="font-semibold uppercase text-neutral-500">
+                    Scroll down
+                </span>
             </div>
-
-            <div className="splide__progress">
-                <div className="splide__progress__bar" />
+            <HorizontalScrollCarousel />
+            <div className="flex h-48 items-center justify-center">
+                <span className="font-semibold uppercase text-neutral-500">
+                    Scroll up
+                </span>
             </div>
-
-            <button className="splide__toggle">
-                <span className="splide__toggle__play">Play</span>
-                <span className="splide__toggle__pause">Pause</span>
-            </button>
-        </Splide>
+        </div>
     );
 };
 
-export default Navbar;
+const HorizontalScrollCarousel = () => {
+    const targetRef = useRef(null);
+    const { scrollYProgress } = useScroll({
+        target: targetRef,
+    });
+
+    const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+
+    return (
+        <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+            <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+                <motion.div style={{ x }} className="flex gap-4">
+                <div className='flex overflow-hidden pb-8 horizontial-div-other-gig'>
+                    <div>
+                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                    </div>
+                    <div>
+                        <div className="flex flex-col m-4 rounded-xl p-6 w-max " style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                        <div className="flex flex-col m-4 rounded-xl p-6" style={{ backgroundColor: "#F7F1FF", border: "4px solid #E0CCFB" }} >
+                            <div className='mb-3'>
+                                <img src={hand} alt="img" loading='lazy' className='md:h-[100%] h-[64px]' />
+                            </div>
+                            <h6 className='text-[#3D3E3E] font-bold md:text-lg text-xs'>Merchant  Onboarding</h6>
+                            <div className='text-[#7C7C7C] font-normal md:text-base text-[10px] md:py-3 py-2'>
+                                <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>
+                            </div>
+                            <hr />
+                            <p className='md:pt-4 pt-2 font-normal md:text-base text-xs text-bold'>Current Opening : <span className='font-bold md:text-base text-xs text-[#33A3CF]'> 45+ </span></p>
+                        </div>
+                    </div>
+
+                </div>
+                </motion.div>
+            </div>
+        </section>
+    );
+};
+
+export default Example;
+
+const EarningOpportunityData = [
+    { img: hand, name: "Merchant  Onboarding", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", bgColor: "#F7F1FF", borderColor: "#E0CCFB" },
+
+    { img: id, name: "KYC Approval", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#ACE5DA", bgColor: "#E5FFFA" },
+
+    { img: creditCard, name: "Credit Card Seller", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#F2BDDF", bgColor: "#FFE4F5" },
+
+    {
+        img: dopening, name: "Demat Account Opening", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li>
+            <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/",
+        borderColor: "#BBE0EE", bgColor: "#D4F3FF"
+    },
+
+    { img: homeLoan, name: "Home Loan", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#FFBDBD", bgColor: "#FFEFEF" },
+
+    { img: saving, name: "Savings Account", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#F9E88C", bgColor: "#FFFBE5" },
+
+    { img: qr, name: "QR Installation", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#FBD3BF", bgColor: "#FFECE3" },
+
+    { img: surveyfrom, name: "Surveys & Audits", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#ACE5DA", bgColor: "#E5FFFA" },
+
+    { img: homeLoan, name: "Merchant  Onboarding", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#FFBDBD", bgColor: "#FFEFEF" },
+
+    { img: saving, name: "Merchant  Onboarding", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#F9E88C", bgColor: "#FFFBE5" },
+
+    { img: qr, name: "Merchant  Onboarding", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#FBD3BF", bgColor: "#FFECE3" },
+
+    { img: surveyfrom, name: "Merchant  Onboarding", prara: <ul className='list-disc pl-5'><li>Lorem ipsum dolor sit</li> <li>amet Consectetur adipiscing elit</li></ul>, opening: "Current Opening : ", vancant: " 45+", link: "/", borderColor: "#ACE5DA", bgColor: "#E5FFFA" },
+]

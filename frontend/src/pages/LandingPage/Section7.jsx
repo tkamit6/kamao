@@ -60,7 +60,7 @@ const Section7 = () => {
     }
 
     return (
-        <section className='landSection7 bg-[#FFF5EF] container mx-auto md:py-4 max-w-7xl wrap rounded-2xl'>
+        <section className='landSection7 bg-[#FFF5EF] container mx-auto md:mt-14 md:py-4 max-w-7xl wrap rounded-2xl'>
             <div className='md:hidden block  mb-4'>
                 <h2 className='font-head w-[97%] text-center mx-auto mb-3 text-[#E78353] font-bold md:text-[2.6rem] text-[1.7rem]'>Earn more with Kamaao Jobs</h2>
                 <p className='text-[#7C7C7C] text-center font-bold md:text-lg text-base'>Earn via refereing kamaao jobs as well </p>

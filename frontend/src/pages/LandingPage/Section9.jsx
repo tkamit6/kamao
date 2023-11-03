@@ -3,7 +3,7 @@ import img1 from '../../images/landingPage/Group155.webp'
 import closeCircle from '../../images/landingPage/close-circle.svg'
 import tickCircle from '../../images/landingPage/tick-circle.svg'
 import tickCircleWhite from '../../images/landingPage/tickCircleWhite.svg'
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Section9 = () => {
     return (

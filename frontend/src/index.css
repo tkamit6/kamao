@@ -706,3 +706,34 @@ textarea {
 .landSection2Swiper .swiper-pagination-bullet-active {
   width: 50px!important;
 } 
+
+
+
+.App {
+  display: flex;
+}
+
+.stickyDiv {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: lightblue;
+  padding: 50px;
+  font-size: 20px;
+}
+
+.horizontalScroll {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+.content {
+  display: flex;
+}
+
+.item {
+  min-width: 100px;
+  height: 100px;
+  background-color: lightgreen;
+  margin: 10px;
+}

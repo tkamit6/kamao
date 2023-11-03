@@ -21,6 +21,10 @@
 	position: sticky;
 	top: 2vh;
 }
+#howitworks .stick-para {
+	position: sticky;
+	top: 4vh;
+}
 
 .BusinessSection4 .stick-para {
 	position: sticky;
