@@ -45,7 +45,7 @@ const Navbar = () => {
                                 <Link to={link.link} spy={true}
                                     smooth={true}
                                     offset={-80}
-                                    // duration={500}
+                                    duration={500}
                                     isDynamic={true} className='text-[#7C7C7C] text-base font-bold hover:text-[#E16428] transition duration-200 cursor-pointer'> {link.name}</Link>
                             </li>
                         ))
