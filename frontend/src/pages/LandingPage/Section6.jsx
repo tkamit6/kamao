@@ -152,7 +152,7 @@ const Section6 = () => {
             </Swiper>
 
             <div className='mx-auto flex items-center justify-center text-center relative mt-6 gap-4'>
-                <Link to='#' className='text-[#FA6F2C] -mt-20 px-10 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
+                <Link to='#' className='text-[#FA6F2C] md:-mt-20 px-10 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Scroll </Link>
                 <button className='md:block hidden p-3 -mt-20  border bg-white border-[#FA6F2C] rounded-full ' >
                     <BsArrowRight color='#FA6F2C' />
                 </button>
