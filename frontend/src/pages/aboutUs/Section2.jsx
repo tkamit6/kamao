@@ -4,7 +4,7 @@ import {motion} from 'framer-motion';
 
 export default function Section2() {
     return (
-        <motion.section initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} transition={{delay:0.750}} className='container mx-auto md:py-8 max-w-7xl md:mt-2 py-0 wrap '>
+        <motion.section initial={{opacity:0, y:-100}} animate={{opacity:1, y:0}} transition={{delay:0.750}} className='container mx-auto md:py-8 max-w-7xl md:mt-2 py-0 wrap '>
             <div className='md:grid md:grid-cols-12 hidden'>
                 <div className='col-span-4'>
                     <div className='relative'>

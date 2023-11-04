@@ -13,7 +13,7 @@ const Section1 = () => {
             <motion.div
                 initial={{ opacity: 0, y: -100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.975, duration: 2, type: "spring" }}>
+                transition={{ delay: 0.550, duration: 2, type: "spring" }}>
                 <div className='grid sm:grid-cols-2 md:mx-[102px] md:my-[130px] relative md:text-start text-center'>
                     <div className='sm:col-span-1 md:pt-2 pt-72 mx-auto w-[90%] '>
                         <div className='md:w-[90%]'>
