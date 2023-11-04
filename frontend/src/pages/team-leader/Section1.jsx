@@ -7,7 +7,7 @@ export default function Section1() {
         <motion.div
             initial={{ opacity: 0, y: -100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.550 }}
+            transition={{ delay: 0.550, duration:2 }}
         >
             <section className='teamLeaderSection1 container mx-auto md:h-[50rem] h-[33rem] md:mb-8 md:mt-4 py-0 max-w-7xl wrap '>
                 <div className='text-center md:pt-16 '>
