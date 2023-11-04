@@ -2,12 +2,12 @@ import React from 'react'
 import downloadIcon from '../../images/download.svg'
 import bagIcon from '../../images/bag.svg'
 import locationIcon from '../../images/location.svg'
-import growIcon from '../../images/graph.svg'
-
+import growIcon from '../../images/graph.svg';
+import {motion} from 'framer-motion';
 
 const Section2 = () => {
     return (
-        <section className='landSection2 container mx-auto md:py-16 max-w-7xl wrap '>
+        <motion.section initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} transition={{delay:0.750}} className='landSection2 container mx-auto md:py-16 max-w-7xl wrap '>
             <h1 className='text-center mx-auto font-bold md:text-5xl text-[1.75rem] leading-9 font-head  text-[#3D3E3E]'>We Believe that<span className='text-[#E78353] font-head'> outstanding customer <br /> experience </span> are a direct result</h1>
             <ul className='divc p-4 md:px-[102px] rounded-2xl mt-8 md:gap-6 gap-1 grid grid-cols-4 justify-between'>
                 <li className='items-center md:col-span-1 col-span-2 flex flex-row gap-4 '>
@@ -39,7 +39,7 @@ const Section2 = () => {
                     </div>
                 </li>
             </ul>
-        </section>
+        </motion.section>
     )
 }
 

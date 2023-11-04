@@ -1,9 +1,10 @@
 import React from 'react'
-import img from '../../images/about-us/Group183.png'
+import img from '../../images/about-us/Group183.png';
+import {motion} from 'framer-motion';
 
 export default function Section2() {
     return (
-        <section className='container mx-auto md:py-8 max-w-7xl md:mt-2 py-0 wrap '>
+        <motion.section initial={{opacity:0, y:100}} animate={{opacity:1, y:0}} transition={{delay:0.750}} className='container mx-auto md:py-8 max-w-7xl md:mt-2 py-0 wrap '>
             <div className='md:grid md:grid-cols-12 hidden'>
                 <div className='col-span-4'>
                     <div className='relative'>
@@ -51,6 +52,6 @@ export default function Section2() {
                     <p className='md:text-lg text-base font-medium leading-[1.43rem] text-[#7C7C7C] mb-6'>Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue morbi ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar augue mor Lorem ipsum dolor sit amet consectetur ultricies tristique integer tincidunt pellentesque. Nisi faucibus a justo bibendum.Lorem ipsum dolor sit amet consectetur. Velit luctus pulvinar </p>
                 </div>
             </div>
-        </section>
+        </motion.section>
     )
 }
