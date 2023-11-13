@@ -60,7 +60,7 @@ const tabContentFoodDelievry = useContext(MyContext)
                         <div className="grid md:grid-cols-2 grid-cols-2 md:gap-y-4 md:gap-x-8 gap-x-4 ">
                             {
                                 tabContentEcomDelievry.map((link, id) => (
-                                    <div key={id} className={`cards mt-3 rounded-lg col-span-1 md:p-8 p-4 flex flex-col  ${toggle === 1 ? "bg-[#fff]" : "hidden"} `} >
+                                    <div key={id} className={`cards cards-transition mt-3 rounded-lg col-span-1 md:p-8 p-4 flex flex-col  ${toggle === 1 ? "bg-[#fff]" : "hidden"} `} >
                                         <h6 className='font-bold md:text-2xl text-lg'>{link.id}</h6>
                                         <h6 className='font-bold md:text-lg text-xs'>{link.name}</h6>
                                         <div className='p font-normal md:text-base text-[10px] md:py-3 py-2'>
