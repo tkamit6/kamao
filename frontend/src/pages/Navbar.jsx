@@ -4,7 +4,7 @@ import Logo from '../images/logo.svg'
 import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom'
 import menu from '../images/menu.svg';
-import {Button} from "@nextui-org/button";
+import { Button } from "@nextui-org/button";
 
 let Links = [
     { name: "Service", link: "service" },
