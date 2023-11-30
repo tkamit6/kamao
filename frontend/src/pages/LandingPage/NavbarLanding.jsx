@@ -12,7 +12,6 @@ import instaIcon from '../../images/landingPage/nav-icon/instagram.svg'
 import YtIcon from '../../images/landingPage/nav-icon/youtube.svg'
 import whatsAppIcon from '../../images/landingPage/nav-icon/whatsapp.svg';
 import {motion} from 'framer-motion';
-import {Button} from "@nextui-org/button";
 
 
 const Navbar = () => {
@@ -147,9 +146,9 @@ const Navbar = () => {
                         </div>
                     </div>
                 </ul>
-                <Button className='text-white bg-orange-600 rounded-full px-8 py-2 focus-within:outline-none hidden md:block'>
+                <button className='text-white bg-orange-600 rounded-full px-8 py-2 hidden md:block'>
                     Contact Us
-                </Button>
+                </button>
             </motion.div>
         </nav>
     )

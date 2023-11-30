@@ -9,7 +9,6 @@ import PageNotFound from './pages/PageNotFound';
 import Example from './pages/Example'
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import { NextUIProvider } from "@nextui-org/react";
 
 function App() {
 
@@ -30,7 +29,6 @@ function App() {
   }, [])
   return (
     <>
-      <NextUIProvider>
         <Helmet>
           <meta name="theme-color" content="#9d4edd" />
         </Helmet>
@@ -47,7 +45,6 @@ function App() {
           </Routes>
           {/* <Footer /> */}
         </BrowserRouter>
-      </NextUIProvider>
     </>
   );
 }

@@ -8,8 +8,7 @@ import salesBoy from '../../images/landingPage/salesBoy.png';
 import electrician from '../../images/landingPage/electrician.png';
 import assistant from '../../images/landingPage/assistant.png'
 import { Link } from 'react-router-dom';
-import { BsArrowRight } from 'react-icons/bs';
-import {Button} from "@nextui-org/button";
+import { BsArrowRight } from 'react-icons/bs'
 
 
 const offerData = [
@@ -47,7 +46,7 @@ const Section4 = () => {
             {/* form mobile end */}
 
             <div className='mx-auto text-center items-center flex justify-center '>
-                <Button className='text-[#FA6F2C] w-fit pr-12 py-2 ps-7 flex relative rounded-full items-center border border-[#FA6F2C] font-bold text-base' >Apply Now <BsArrowRight className='absolute items-center top-3 right-6' /> </Button>
+                <Link to='' className='text-[#FA6F2C] w-fit pr-12 p-5 flex relative rounded-full items-center border border-[#FA6F2C] py-2  font-bold text-base' >Apply Now <BsArrowRight className='absolute items-center top-3 right-6' /> </Link>
             </div>
         </section>
     )

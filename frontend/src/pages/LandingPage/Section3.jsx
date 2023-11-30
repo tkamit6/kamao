@@ -7,8 +7,7 @@ import M1 from '../../images/landingPage/M1.png'
 import M2 from '../../images/landingPage/M2.png'
 import M3 from '../../images/landingPage/M3.png'
 import M4 from '../../images/landingPage/M4.png'
-import { Link } from 'react-router-dom';
-import {Button} from "@nextui-org/button";
+import { Link } from 'react-router-dom'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -85,7 +84,7 @@ const slider1Ref = useRef()
                                 ))
                             }
                             <div className='md:mt-8'>
-                                <Button to='' className='bg-white rounded-full font-bold text-base border border-[#E78353] text-[#FA6F2C] px-5 py-2.5'>Start Earning Now</Button>
+                                <Link to='' className='bg-white rounded-full font-bold text-base border border-[#E78353] text-[#FA6F2C] px-5 py-2.5'>Start Earning Now</Link>
                             </div>
                         </div>
                     </div>

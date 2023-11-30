@@ -4,8 +4,7 @@ import zomato from '../../images/landingPage/Zomato.png';
 import IDFC from '../../images/landingPage/IDFC.svg';
 import rapido from '../../images/landingPage/rapido.png'
 import paytm from '../../images/landingPage/paytm.png'
-import { BsArrowRight } from 'react-icons/bs';
-import {Button} from "@nextui-org/button";
+import { BsArrowRight } from 'react-icons/bs'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -105,7 +104,7 @@ const Section5 = () => {
                 </div>
 
                 <div className='mx-auto flex items-center justify-center relative mt-8'>
-                    <Button to='' className='text-[#FA6F2C] relative items-center px-5 w-fit pr-12 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Apply to jobs now <BsArrowRight className='absolute top-3 right-5' /> </Button>
+                    <Link to='' className='text-[#FA6F2C] relative items-center px-5 w-fit pr-12 rounded-full border bg-white border-[#FA6F2C] py-2 font-bold text-base' >Apply to jobs now <BsArrowRight className='absolute top-3 right-5' /> </Link>
                 </div>
             </div>
         </section>
