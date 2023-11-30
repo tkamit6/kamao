@@ -3,7 +3,8 @@ import { AiOutlineClose } from 'react-icons/ai'
 import Logo from '../images/logo.svg'
 import { Link } from 'react-scroll';
 import { NavLink } from 'react-router-dom'
-import menu from '../images/menu.svg'
+import menu from '../images/menu.svg';
+import {Button} from "@nextui-org/button";
 
 let Links = [
     { name: "Service", link: "service" },
@@ -51,9 +52,9 @@ const Navbar = () => {
                         ))
                     }
                 </ul>
-                <button className='text-white bg-orange-600 rounded-full px-8 py-2 hidden md:block'>
+                <Button className='text-white bg-orange-600 rounded-full px-8 py-2 hidden md:block'>
                     Get Started
-                </button>
+                </Button>
             </div>
         </nav>
     )

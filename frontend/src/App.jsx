@@ -9,6 +9,7 @@ import PageNotFound from './pages/PageNotFound';
 import Example from './pages/Example'
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import { NextUIProvider } from "@nextui-org/react";
 
 function App() {
 
@@ -18,34 +19,35 @@ function App() {
       metaThemeColor.setAttribute("content", "#9d4edd");
     }
   }, []);
-  
-  useEffect( () => {
+
+  useEffect(() => {
     (
       async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
+        const LocomotiveScroll = (await import('locomotive-scroll')).default
+        const locomotiveScroll = new LocomotiveScroll();
       }
     )()
   }, [])
   return (
     <>
-     <Helmet>
-        <meta name="theme-color" content="#9d4edd" />
-      </Helmet>
-      <BrowserRouter>
-        {/* <Navbar/> */}
-        <Routes>
-          <Route exact path="/" element={<LandingPage />} />
-          <Route exact path="/landing" element={<LandingPage />} />
-          <Route exact path="/business" element={<BusinessPage />} />
-          <Route exact path="/about-us" element={<About />} />
-          <Route exact path="/team-leader" element={<TeamLeader />} />
-          <Route exact path="/ex" element={<Example />} />
-          <Route path="*" element={<PageNotFound />} />
-        </Routes>
-        {/* <Footer /> */}
-      </BrowserRouter>
-
+      <NextUIProvider>
+        <Helmet>
+          <meta name="theme-color" content="#9d4edd" />
+        </Helmet>
+        <BrowserRouter>
+          {/* <Navbar/> */}
+          <Routes>
+            <Route exact path="/" element={<LandingPage />} />
+            <Route exact path="/landing" element={<LandingPage />} />
+            <Route exact path="/business" element={<BusinessPage />} />
+            <Route exact path="/about-us" element={<About />} />
+            <Route exact path="/team-leader" element={<TeamLeader />} />
+            <Route exact path="/ex" element={<Example />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+          {/* <Footer /> */}
+        </BrowserRouter>
+      </NextUIProvider>
     </>
   );
 }

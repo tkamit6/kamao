@@ -692,5 +692,7 @@ textarea {
   .swiper-grid-column > .swiper-wrapper{
     flex-direction: row !important;
   }
-
+}
+.ll::-webkit-scrollbar {
+  width: 0px !important;
 }
