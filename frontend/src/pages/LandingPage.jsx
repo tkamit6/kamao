@@ -27,6 +27,7 @@ const LandingPage = () => {
 
   return (
     <>
+    
       {
         loading ? (<img src={loadingPage} alt='loading' className='absolute top-[30%] left-0 right-0 mx-auto' />) :
           <>

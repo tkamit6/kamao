@@ -9,6 +9,7 @@ import PageNotFound from './pages/PageNotFound';
 import Example from './pages/Example'
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
+import SmoothScroll from './SmoothScroll'
 
 function App() {
 
