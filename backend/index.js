@@ -50,7 +50,7 @@ app.post('/sendmail', async (req, res) => {
         const info = await transporter.sendMail({
             from: `"${fullname}" <${email}>`, // sender address
             to: ["amit.digioffice@gmail.com"],
-            subject: "Kamaao - Team Leader", // Subject line
+            subject: "Kamaao - Team Leader", // Subject lin
             text: `${fullname}`, // plain text body
             html: `${daraArray.join('<br/>')}`
 
