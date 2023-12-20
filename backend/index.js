@@ -49,7 +49,7 @@ app.post('/sendmail', async (req, res) => {
         });
         const info = await transporter.sendMail({
             from: `"${fullname}" <${email}>`, // sender address
-            to: ["amit.digioffice@gmail.com", "sumitmca11@gmail.com", "manishdigi9031@gmail.com"],
+            to: ["amit.digioffice@gmail.com"],
             subject: "Kamaao - Team Leader", // Subject line
             text: `${fullname}`, // plain text body
             html: `${daraArray.join('<br/>')}`
