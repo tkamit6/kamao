@@ -18,7 +18,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //     }
 // ));
 
-app.use(cors())
+app.use(cors({
+    origin: 'https://kamao.vercel.app',
+    credentials: true
+}));
 
 app.get('/', (req, res) => {
     res.send("I am server")
