@@ -66,7 +66,7 @@ export default function Section6() {
         e.preventDefault()
         try {
             setloading(true)
-            await axios.post('https://kamao-api.vercel.app/sendmail', formData)
+            await axios.post(`${apiUrl}/sendmail`, formData)
                 .then(response => { console.log(response) });
 
             setloading(false)
