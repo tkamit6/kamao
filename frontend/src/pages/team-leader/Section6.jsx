@@ -189,7 +189,7 @@ export default function Section6() {
                                     </div>
                                     <div className='flex space-x-4'>
                                         <button type='button' onClick={() => setformStep(1)} className='bg-white text-[#FA6F2C] gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-5 me-2 relative border border-[#FA6F2C] font-bold cursor-pointer'><BsArrowLeft color='#fff absolute' /> Previous  </button>
-                                        <button type='submit' className='bg-[#FA6F2C] text-white gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-9 me-2 relative border border-[#FA6F2C] font-bold cursor-pointer'> {loading ? (<img src={loadingSVG} alt='loading' className='h-6 w-6' />) : 'Submit'}  </button>
+                                        <button type='submit' disabled={loading} className='bg-[#FA6F2C] text-white gap-x-3 mt-6 flex items-center rounded-3xl py-2 px-9 me-2 relative border border-[#FA6F2C] font-bold cursor-pointer'> {loading ? (<img src={loadingSVG} alt='loading' className='h-6 w-6' />) : 'Submit'}  </button>
                                     </div>
                                 </form>
                             )
